@@ -13,6 +13,7 @@ void WindowManager::Destroy(){
 }
 
 WindowManager& WindowManager::GetInstance(){
+    static WindowManager instance;
     return instance;
 }
 
@@ -21,7 +22,7 @@ SDL_Window* WindowManager::GetWindow(){
 }
 
 SDL_Renderer* WindowManager::GetRenderer(){
-    return renderer
+    return renderer;
 }
 
 
