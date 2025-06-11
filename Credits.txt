@@ -1,0 +1,2 @@
+Copyright/Attribution Notice: 
+The 2D chess set used is JohnPablok's improved Cburnett chess set.
