@@ -1,6 +1,6 @@
 #include <iostream>
 #include <SDL2/SDL.h>
-#include "WindowManager/WindowManager.cpp"
+#include "GUI/WindowManager/WindowManager.cpp"
 
 bool init();
 void kill();
@@ -89,12 +89,12 @@ bool loop() {
 }
 
 bool init() {
-	WindowManager* WindowManager = WindowManager::GetInstance();
-	if(!WindowManager->TryCreatingWindow("testwindow", 600, 400)){
+	WindowManager& WindowManager = WindowManager::GetInstance();
+	if(!WindowManager.TryCreatingWindow("testwindow", 600, 400)){
 		return false;
 	}
-	window = WindowManager->GetWindow();
-	renderer = WindowManager->GetRenderer();
+	window = WindowManager.GetWindow();
+	renderer = WindowManager.GetRenderer();
 
 	SDL_SetRenderDrawColor( renderer, 255, 255, 255, 255 );
 	SDL_RenderClear( renderer );
