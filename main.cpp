@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SDL2/SDL.h>
+#include "WindowManager/WindowManager.cpp"
 
 bool init();
 void kill();
@@ -88,25 +89,12 @@ bool loop() {
 }
 
 bool init() {
-	// See last example for comments
-	if ( SDL_Init( SDL_INIT_EVERYTHING ) < 0 ) {
-		std::cout << "Error initializing SDL: " << SDL_GetError() << std::endl;
-		system("pause");
-		return false;
-	} 
-
-	window = SDL_CreateWindow( "Example", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 150, 150, SDL_WINDOW_SHOWN );
-	if ( !window ) {
-		std::cout << "Error creating window: " << SDL_GetError()  << std::endl;
-		system("pause");
+	WindowManager* WindowManager = WindowManager::GetInstance();
+	if(!WindowManager->TryCreatingWindow("testwindow", 600, 400)){
 		return false;
 	}
-
-	renderer = SDL_CreateRenderer( window, -1, SDL_RENDERER_ACCELERATED );
-	if ( !renderer ) {
-		std::cout << "Error creating renderer: " << SDL_GetError() << std::endl;
-		return false;
-	}
+	window = WindowManager->GetWindow();
+	renderer = WindowManager->GetRenderer();
 
 	SDL_SetRenderDrawColor( renderer, 255, 255, 255, 255 );
 	SDL_RenderClear( renderer );
