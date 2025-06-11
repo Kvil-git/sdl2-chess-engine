@@ -2,9 +2,11 @@
 #include <SDL2/SDL.h>
 
 class BoardRenderer {
-    SDL_Window* window;
-    SDL_Renderer* renderer;
+    private:
+        virtual void DrawBoard();
+        virtual void DrawPiecesFromFEN(std::string FEN);
 
-    virtual void RenderFEN(std::string FEN);
-    virtual ~BoardRenderer();
+    public:
+        virtual void RenderFEN(std::string FEN);
+        virtual ~BoardRenderer();
 };

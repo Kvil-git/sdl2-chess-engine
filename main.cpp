@@ -1,3 +1,4 @@
+// g++ main.cpp `pkg-config --cflags --libs sdl2`
 #include <iostream>
 #include <SDL2/SDL.h>
 #include "GUI/WindowManager/WindowManager.cpp"
