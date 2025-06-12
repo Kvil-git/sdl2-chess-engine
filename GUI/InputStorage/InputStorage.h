@@ -2,13 +2,11 @@
 #include <string>
 #include <vector>
 
-#include "././Math/VectorN.h"
-
-typedef VectorN<float, 2> Vector2F;
+#include "../../Math/Vector.h"
 
 struct InputStorage {
     private:
-        InputStorage();
+        InputStorage(){};
         ~InputStorage(){ Destroy(); };
 
         InputStorage(const InputStorage& other) = delete;
@@ -16,12 +14,12 @@ struct InputStorage {
 
     public:
         bool PressedKeys[SDL_NUM_SCANCODES] = {false};
-        Vector2F MousePosition;
+        Vector<int, 2> MousePosition, MousePositionChange;
 
         static InputStorage& GetInstance(){
             static InputStorage instance;
             return instance;
-        }
+        };
 
         bool PollEvents();
         void Destroy();

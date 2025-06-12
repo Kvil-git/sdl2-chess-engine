@@ -16,15 +16,11 @@ SDL_Surface* winSurface;
 int main(int argc, char** args) {
 
 	InputStorage& inputStorage = InputStorage::GetInstance();
-	
+	std::cout<<"test\n";
 	if ( !init() ) return 1;
 
 	while ( inputStorage.PollEvents()) {
-		// wait before processing the next frame
-		for(int i=0; i<512; i++){
-			std::cout << inputStorage.PressedKeys[i] <<" "<<std::endl;
-		}
-		SDL_Delay(10); 
+		
 	}
 
 	kill();
@@ -35,8 +31,6 @@ bool loop() {
 	// Clear the window to white
 	SDL_SetRenderDrawColor( renderer, 255, 255, 255, 255 );
 	SDL_RenderClear( renderer );
-
-
 	// Update window
 	SDL_RenderPresent( renderer );
 
@@ -65,10 +59,6 @@ bool init() {
 
 void kill() {
 	// Quit
-	WindowManager::GetInstance().Destroy();
 	InputStorage::GetInstance().Destroy();
-
-	SDL_DestroyRenderer( renderer );
-	SDL_DestroyWindow( window );
-	SDL_Quit();
+	WindowManager::GetInstance().Destroy();
 }

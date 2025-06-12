@@ -14,11 +14,14 @@ template <typename ComponentType> struct Quaternion;
 #ifndef VECTOR_H
 #define VECTOR_H
 
+
 template <typename ComponentType, size_t Dimensions>
 struct Vector {
     ComponentType components[Dimensions];
-    using VectorN = Vector<ComponentType, Dimensions>;
+
+    using Vector2 = Vector<ComponentType, 2>;
     using Vector3 = Vector<ComponentType, 3>;
+    using VectorN = Vector<ComponentType, Dimensions>;
 
     // matrix-vector multiplication
     template<typename MatrixType> VectorN operator*(const Matrix<MatrixType, Dimensions, Dimensions> &matrix) {
@@ -85,6 +88,15 @@ struct Vector {
     Vector operator-(const VectorN &other) {
         static_assert(Dimensions > 0, "Vector subtraction is not defined for zero-dimensional vectors.");
         return (*this) + (-other);
+    }
+
+    // indexing a vector element
+    ComponentType& operator[](unsigned int index) {
+        if(index >= Dimensions) {
+            std::cerr<<"Indexing vector with index bigger than vector's size\n";
+            return this->components[0];
+        }
+        return this->components[index];
     }
 
     // vector scaling

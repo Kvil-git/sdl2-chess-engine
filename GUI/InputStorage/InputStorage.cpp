@@ -5,18 +5,39 @@
 
 
 bool InputStorage::PollEvents() {
-    SDL_Event e;
-    SDL_PollEvent(&e);
+    SDL_Event event;
+    SDL_PollEvent(&event);
 
-    if(e.type == SDL_QUIT){
-		return false;
-	} else if (e.type == SDL_KEYDOWN) {
-        PressedKeys[e.key.keysym.scancode] = true;
-    } else if (e.type == SDL_KEYUP) {
-        PressedKeys[e.key.keysym.scancode] = false;
-    }
+	switch(event.type){
+		case SDL_QUIT:
+			return false;
+		case SDL_KEYDOWN:
+			std::cout << "pressed key: [" << event.type << "]\n";
+        	PressedKeys[event.key.keysym.scancode] = true;
+			break;
+		case SDL_KEYUP:
+			std::cout << "released key: [" << event.type << "]\n";
+        	PressedKeys[event.key.keysym.scancode] = false;
+			break;
+		case SDL_MOUSEMOTION:
+			MousePositionChange[0] = event.button.x - MousePosition[0];
+			MousePositionChange[1] = event.button.y - MousePosition[1];
+
+			MousePosition[0] = event.button.x;
+			MousePosition[1] = event.button.y;
+
+			std::cout<<event.button.x<<"   |   "<<MousePosition[0]<<"\n";
+			std::cout<<event.button.y<<"   |   "<<MousePosition[1]<<"\n";
+			//for(int i=0; i<2; i++) std::cout<<"mouse position by element "<< i <<" = "<<MousePosition[i]<<", change in that position since last frame = "<<MousePositionChange[i]<<"\n";
+			break;
+	}
     
 	return true;
+
+}
+
+
+void InputStorage::Destroy() {
 
 }
 
