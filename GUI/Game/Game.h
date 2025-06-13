@@ -4,26 +4,19 @@
 
 class Game {
     private:
-        enum GameResults{
-            GameStillGoing = -1,
-            WhiteWin = 1,
-            BlackWin = 0,
-            Draw = 2
-        };
-
         std::stack<Move> MoveList;
-        std::string startingFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+        std::string currentFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
         bool sideToMove;
-        bool sideOfThePlayer;
+        bool playerColor;
 
         int ClockTime;
         int ClockIncrement;
 
         bool IsGameOnTime;
 
-        int gameResult = GameStillGoing;
-
+        void UpdateCurrentFEN();
+        
     public:
         enum PlayerColors{
             White = 1,
@@ -38,12 +31,22 @@ class Game {
 
         void MakeMove(Move);
         void UndoLastMove();
-        bool IsGameOver();
+        
+        enum GameResults{
+            GameStillGoing = -1,
+            WhiteWin = 1,
+            BlackWin = 0,
+            Draw = 2
+        };
+        
+        int gameResult = GameStillGoing;
 
+        bool IsGameOver();
         void AskCurrentPlayerToMove();
         
         std::string GetGamePGN();
         std::string GetCurrentPosition();
+        std::string GetCurrentFEN();
 };
 
 

@@ -4,7 +4,8 @@
 #include "GUI/WindowManager/WindowManager.cpp"
 #include "GUI/InputStorage/InputStorage.cpp"
 #include "GUI/Game/Game.h"
-
+#include "GUI/BoardRendering/Renderer2D/Renderer2D.cpp"
+#include "GUI/BoardRendering/BoardRenderer.h"
 
 bool init();
 void kill();
@@ -14,17 +15,22 @@ int main(int argc, char** args) {
 	InputStorage& inputStorage = InputStorage::GetInstance();
 	std::cout<<"test\n";
 
-	Game newGame = Game();
+	bool playerColor = Game::PlayerColors::White;
+	Game newGame = Game(playerColor);
 	
+
+	Renderer2D boardRenderer = Renderer2D();
+
+
 	if ( !init() ) return 1;
 
 	while ( inputStorage.PollEvents()) {
-		//main loop
-		/*
+		
 		while (not newGame.IsGameOver()) {
 			newGame.AskCurrentPlayerToMove();
+			boardRenderer.RenderFEN(newGame.GetCurrentFEN());
 		}
-		*/
+		
 	}
 
 	kill();
