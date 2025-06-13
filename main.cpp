@@ -5,6 +5,7 @@
 #include "GUI/InputStorage/InputStorage.cpp"
 #include "Game/Game.h"
 
+
 bool init();
 void kill();
 
