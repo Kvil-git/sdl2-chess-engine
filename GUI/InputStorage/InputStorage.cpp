@@ -12,11 +12,9 @@ bool InputStorage::PollEvents() {
 		case SDL_QUIT:
 			return false;
 		case SDL_KEYDOWN:
-			std::cout << "pressed key: [" << event.type << "]\n";
         	PressedKeys[event.key.keysym.scancode] = true;
 			break;
 		case SDL_KEYUP:
-			std::cout << "released key: [" << event.type << "]\n";
         	PressedKeys[event.key.keysym.scancode] = false;
 			break;
 		case SDL_MOUSEMOTION:
@@ -25,10 +23,6 @@ bool InputStorage::PollEvents() {
 
 			MousePosition[0] = event.button.x;
 			MousePosition[1] = event.button.y;
-
-			std::cout<<event.button.x<<"   |   "<<MousePosition[0]<<"\n";
-			std::cout<<event.button.y<<"   |   "<<MousePosition[1]<<"\n";
-			//for(int i=0; i<2; i++) std::cout<<"mouse position by element "<< i <<" = "<<MousePosition[i]<<", change in that position since last frame = "<<MousePositionChange[i]<<"\n";
 			break;
 	}
     

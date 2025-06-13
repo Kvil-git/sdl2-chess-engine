@@ -2,7 +2,10 @@
 #include <string>
 
 class Renderer2D : BoardRenderer {
-    virtual void RenderFEN(std::string FEN);
-    Renderer2D();
-    ~Renderer2D();
+    private:
+        
+    public:
+        virtual void RenderFEN(std::string FEN);
+        Renderer2D();
+        ~Renderer2D();
 };
