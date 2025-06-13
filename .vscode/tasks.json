@@ -7,13 +7,11 @@
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "${file}",
-                "$(pkg-config",
-                "--cflags",
-                "--libs",
-                "sdl2)",
+                "main.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "-lSDL2",
+                "-lSDL2_image",
             ],
             "options": {
                 "cwd": "${fileDirname}"

@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 #include "GUI/WindowManager/WindowManager.cpp"
 #include "GUI/InputStorage/InputStorage.cpp"
-#include "Game/Game.h"
+#include "GUI/Game/Game.h"
 
 
 bool init();
@@ -20,9 +20,11 @@ int main(int argc, char** args) {
 
 	while ( inputStorage.PollEvents()) {
 		//main loop
+		/*
 		while (not newGame.IsGameOver()) {
 			newGame.AskCurrentPlayerToMove();
 		}
+		*/
 	}
 
 	kill();
