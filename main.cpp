@@ -3,38 +3,29 @@
 #include <SDL2/SDL.h>
 #include "GUI/WindowManager/WindowManager.cpp"
 #include "GUI/InputStorage/InputStorage.cpp"
+#include "Game/Game.h"
 
 bool init();
 void kill();
-bool loop();
 
-// Pointers to our window and renderer
-SDL_Window* window;
-SDL_Renderer* renderer;
-SDL_Surface* winSurface;
 
 int main(int argc, char** args) {
-
 	InputStorage& inputStorage = InputStorage::GetInstance();
 	std::cout<<"test\n";
+
+	Game newGame = Game();
+	
 	if ( !init() ) return 1;
 
 	while ( inputStorage.PollEvents()) {
-		
+		//main loop
+		while (not newGame.IsGameOver()) {
+			newGame.AskCurrentPlayerToMove();
+		}
 	}
 
 	kill();
 	return 0;
-}
-
-bool loop() {
-	// Clear the window to white
-	SDL_SetRenderDrawColor( renderer, 255, 255, 255, 255 );
-	SDL_RenderClear( renderer );
-	// Update window
-	SDL_RenderPresent( renderer );
-
-	return true;
 }
 
 bool init() {
@@ -42,15 +33,8 @@ bool init() {
 	if(!WindowManager.TryCreatingWindow("testwindow", 600, 400)){
 		return false;
 	}
-	window = WindowManager.GetWindow();
-	renderer = WindowManager.GetRenderer();
-
-	winSurface = SDL_GetWindowSurface( window );
-	if ( !winSurface ) {
-		std::cout << "Error getting surface: " << SDL_GetError() << std::endl;
-		system("pause");
-		return false;
-	}
+	SDL_Window* window = WindowManager.GetWindow();
+	SDL_Renderer* renderer = WindowManager.GetRenderer();
 
 	SDL_SetRenderDrawColor( renderer, 255, 255, 255, 255 );
 	SDL_RenderClear( renderer );
