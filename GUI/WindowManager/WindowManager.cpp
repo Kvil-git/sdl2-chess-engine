@@ -2,6 +2,7 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
+
 void WindowManager::Destroy(){
     if (renderer != nullptr){
         SDL_DestroyRenderer(renderer);
@@ -53,3 +54,4 @@ bool WindowManager::TryCreatingWindow(const char* title, int width, int height){
 
     return true;
 }
+

@@ -2,6 +2,10 @@
 #include <SDL2/SDL.h>
 #include <string>
 
+
+#ifndef GUI_WINDOWMANAGER_H
+#define GUI_WINDOWMANAGER_H
+
 class WindowManager {
 
     private:
@@ -24,3 +28,6 @@ class WindowManager {
 
         void Destroy();
 };
+
+
+#endif
