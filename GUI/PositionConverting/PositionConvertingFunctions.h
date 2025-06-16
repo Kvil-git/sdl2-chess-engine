@@ -2,14 +2,15 @@
 #include <string>
 #include <stack>
 #include "../Move/Move.h"
-#include "../Enums/Enums.h"
+#include "../Enums/PieceTypes.h"
+#include "FENFunctions.h"
+
+#ifndef POSITION_CONVERTING_FUNCTIONS_H
+#define POSITION_CONVERTING_FUNCTIONS_H
+
+
+
 /*
-
-
-
-
-
-
 
 rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 A FEN record contains six fields, each separated by a space. The fields are as follows:[5]
@@ -23,59 +24,74 @@ A FEN record contains six fields, each separated by a space. The fields are as f
 */
 std::string temp = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
-int PieceIdByFEN(char pieceFEN){
-    using namespace Enums;
-    switch(pieceFEN){
-        case 'P': return WhitePawn;
-        case 'N': return WhiteKnight;
-        case 'B': return WhiteBishop;
-        case 'R': return WhiteRook;
-        case 'Q': return WhiteQueen;
-        case 'K': return WhiteKing;
 
-        case 'p': return BlackPawn;
-        case 'n': return BlackKnight;
-        case 'b': return BlackBishop;
-        case 'r': return BlackRook;
-        case 'q': return BlackQueen;
-        case 'k': return BlackKing;
-    }
-    return -1;
-}
+namespace PositionConverting{
 
-bool IsCharacterADigit(char characterToTest){
-    if(characterToTest >= int('0') and characterToTest <= int('9')) return true;
-    return false;
-}
+    BoardPosition FENToBoardPosition(std::string FEN) {
+        BoardPosition output = BoardPosition();
 
-int CharacterToDigit(char characterToConvert){
-    return (int(characterToConvert) - int('0'));
-}
+        for(int i=0; i < 64; i++) {
+            char currentChar = FEN[i];
+            if(IsCharacterADigit(currentChar)) {
+                i += CharacterToDigit(currentChar);
+                continue;
+            }
 
-BoardPosition FENToBoardPosition(std::string FEN) {
-    BoardPosition output = BoardPosition();
-
-    for(int i=0; i < 64; i++) {
-        char currentChar = FEN[i];
-        if(IsCharacterADigit(currentChar)) {
-            i += CharacterToDigit(currentChar);
-            continue;
+            int pieceIdOfCurrentChar = PieceIdByFEN(currentChar);
+            if(pieceIdOfCurrentChar == -1) continue;
+            
+            int row = i/8;
+            int column = i%8;
+            output.Pieces[row][column] = pieceIdOfCurrentChar;
         }
 
-        int pieceIdOfCurrentChar = PieceIdByFEN(currentChar);
-        if(pieceIdOfCurrentChar == -1) continue;
-
-        output.Pieces[i] = pieceIdOfCurrentChar;
+        return output;
     }
 
-    return output;
-}
+    std::string BoardPositionToFEN(BoardPosition position){
+        
+        std::string outputFEN;
 
-std::string BoardPositionToFEN(BoardPosition position){
-    return "";
-}
+        for(int row = 0; row < 8; row++){
+
+            int emptyPiecesCounter = 0;
+
+            for(int column = 0; column < 8; column++){
+                
+                char currentFENchar = FENCharByPieceId(position.Pieces[row][column]);
+
+                if(currentFENchar == 'Z'){
+                    emptyPiecesCounter++;
+                    continue;
+                }
+
+                if(emptyPiecesCounter > 0){
+                    outputFEN += DigitToCharacter(emptyPiecesCounter);
+                    emptyPiecesCounter = 0;
+                }
+
+                outputFEN += currentFENchar;
+            }
+            
+            if(emptyPiecesCounter > 0){
+                outputFEN += DigitToCharacter(emptyPiecesCounter);
+                emptyPiecesCounter = 0;
+            }
+            
+            outputFEN += '/';
+
+        }
+        return outputFEN;
+    }
 
 
-std::string MoveListToPGN(std::stack<Move> moveList, std::string startingPositionFEN){
-    return "";
-}
+    std::string MoveListToPGN(std::stack<Move> moveList, std::string startingPositionFEN){
+        return "";
+    }
+
+};
+
+
+
+
+#endif
