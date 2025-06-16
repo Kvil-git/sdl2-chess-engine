@@ -1,11 +1,16 @@
 // g++ main.cpp `pkg-config --cflags --libs sdl2`
 #include <iostream>
 #include <SDL2/SDL.h>
+
+
+#include "GUI/Enums/PlayerColors.h"
+#include "GUI/Enums/PieceTypes.h"
+
 #include "GUI/WindowManager/WindowManager.cpp"
 #include "GUI/InputStorage/InputStorage.cpp"
-#include "GUI/Game/Game.h"
+#include "GUI/Game/Game.cpp"
 #include "GUI/BoardRendering/Renderer2D/Renderer2D.cpp"
-#include "GUI/BoardRendering/BoardRenderer.h"
+#include "GUI/PositionConverting/PositionConvertingFunctions.h"
 
 bool init();
 void kill();
@@ -15,21 +20,41 @@ int main(int argc, char** args) {
 	InputStorage& inputStorage = InputStorage::GetInstance();
 	std::cout<<"test\n";
 
-	bool playerColor = Game::PlayerColors::White;
+	PlayerColors playerColor = PlayerColors::White;
 	Game newGame = Game(playerColor);
 	
 
 	Renderer2D boardRenderer = Renderer2D();
+    SDL_Renderer* renderer = WindowManager::GetInstance().GetRenderer();
+
+
+	std::string defaultFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+
+
+	
+	std::cout<<"default fen: |"<<defaultFEN<<"\n";
+
+	BoardPosition defaultPosition = PositionConverting::FENToBoardPosition(defaultFEN);
+	defaultPosition.Output();
+
+	std::cout<<"converted and reconverted back fen: |"<< PositionConverting::BoardPositionToFEN(defaultPosition)<<"\n\n";
+
 
 
 	if ( !init() ) return 1;
+	std::cout<<"init success\n";
+
+	
 
 	while ( inputStorage.PollEvents()) {
 		
 		while (not newGame.IsGameOver()) {
 			newGame.AskCurrentPlayerToMove();
-			boardRenderer.RenderFEN(newGame.GetCurrentFEN());
+			newGame.GetCurrentFEN();
 		}
+
+		boardRenderer.RenderPosition(defaultPosition);
+		SDL_RenderPresent(renderer);
 		
 	}
 
