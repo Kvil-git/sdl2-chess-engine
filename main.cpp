@@ -2,11 +2,8 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
-// Включаем основной класс GUI
 #include "GUI/GUITypes/WindowGUI/WindowGUI_2D/WindowGUI_2D.h"
-// Включаем функции для конвертации FEN
 #include "GUI/Functions/PositionConverting/PositionConvertingFunctions.h"
-// Включаем синглтоны, чтобы получить к ним прямой доступ
 #include "GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.h"
 #include "GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.h"
 
