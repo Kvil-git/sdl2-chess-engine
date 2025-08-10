@@ -16,6 +16,8 @@ enum PieceTypes{
     BlackRook = 9,
     BlackQueen = 10,
     BlackKing = 11,
+    NONE = 12,
+    
 };
 
 

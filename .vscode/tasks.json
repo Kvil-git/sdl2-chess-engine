@@ -8,10 +8,13 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "main.cpp",
+                "GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp",
+                "GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp",
+                "GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}",
+                "${fileDirname}/main",
                 "-lSDL2",
-                "-lSDL2_image",
+                "-lSDL2_image"
             ],
             "options": {
                 "cwd": "${fileDirname}"

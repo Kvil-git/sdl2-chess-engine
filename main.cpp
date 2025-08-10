@@ -2,61 +2,49 @@
 #include <iostream>
 #include <SDL2/SDL.h>
 
+// Включаем основной класс GUI
+#include "GUI/GUITypes/WindowGUI/WindowGUI_2D/WindowGUI_2D.h"
+// Включаем функции для конвертации FEN
+#include "GUI/Functions/PositionConverting/PositionConvertingFunctions.h"
+// Включаем синглтоны, чтобы получить к ним прямой доступ
+#include "GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.h"
+#include "GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.h"
 
-#include "GUI/Enums/PlayerColors.h"
-#include "GUI/Enums/PieceTypes.h"
-
-#include "GUI/WindowManager/WindowManager.cpp"
-#include "GUI/InputStorage/InputStorage.cpp"
-#include "GUI/Game/Game.cpp"
-#include "GUI/BoardRendering/Renderer2D/Renderer2D.cpp"
-#include "GUI/PositionConverting/PositionConvertingFunctions.h"
 
 bool init();
 void kill();
 
 
+
 int main(int argc, char** args) {
-	InputStorage& inputStorage = InputStorage::GetInstance();
-	std::cout<<"test\n";
-
-	PlayerColors playerColor = PlayerColors::White;
-	Game newGame = Game(playerColor);
-	
-
-	Renderer2D boardRenderer = Renderer2D();
-    SDL_Renderer* renderer = WindowManager::GetInstance().GetRenderer();
-
-
-	std::string defaultFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
-
-
-	
-	std::cout<<"default fen: |"<<defaultFEN<<"\n";
-
-	BoardPosition defaultPosition = PositionConverting::FENToBoardPosition(defaultFEN);
-	defaultPosition.Output();
-
-	std::cout<<"converted and reconverted back fen: |"<< PositionConverting::BoardPositionToFEN(defaultPosition)<<"\n\n";
-
-
 
 	if ( !init() ) return 1;
 	std::cout<<"init success\n";
 
+	WindowGUI_2D windowGUI;
 	
+	WindowManager& windowManager = WindowManager::GetInstance();
+    InputStorage& inputStorage = InputStorage::GetInstance();
+    SDL_Renderer* renderer = windowManager.GetRenderer();
+
+
+	std::string defaultFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
+
+	
+	std::cout<<"default fen: |"<<defaultFEN<<"\n";
+	BoardPosition defaultPosition = PositionConverting::FENToBoardPosition(defaultFEN);
+	defaultPosition.Output();
+
+	std::cout<<"converted and reconverted back fen: "<< PositionConverting::BoardPositionToFEN(defaultPosition)<<"\n\n";
+
+	SDL_Window* window = windowManager.GetWindow();
 
 	while ( inputStorage.PollEvents()) {
 		
-		while (not newGame.IsGameOver()) {
-			newGame.AskCurrentPlayerToMove();
-			newGame.GetCurrentFEN();
-		}
-
-		boardRenderer.RenderPosition(defaultPosition);
+		windowGUI.boardRenderer.RenderPosition(defaultPosition);
 		SDL_RenderPresent(renderer);
 		
-	}
+	}	
 
 	kill();
 	return 0;
@@ -64,7 +52,7 @@ int main(int argc, char** args) {
 
 bool init() {
 	WindowManager& WindowManager = WindowManager::GetInstance();
-	if(!WindowManager.TryCreatingWindow("testwindow", 600, 400)){
+	if(!WindowManager.TryCreatingWindow("testwindow", 400, 400)){
 		return false;
 	}
 	SDL_Window* window = WindowManager.GetWindow();
