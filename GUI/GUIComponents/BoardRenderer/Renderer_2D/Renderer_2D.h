@@ -17,17 +17,17 @@ class Renderer2D : public BoardRenderer {
         };
 
 
-        void DrawPiecesFromPositionFromWhitePerspective(BoardPosition position);
-        void DrawPiecesFromPositionFromBlackPerspective(BoardPosition position);
+        void DrawPiecesFromPositionFromWhitePerspective(BoardArray position);
+        void DrawPiecesFromPositionFromBlackPerspective(BoardArray position);
 
 
         void DrawPieceAt(int piece, SDL_Rect destination);
 
         void DrawBoard(bool fromWhitePerspective = true);
-        void DrawPiecesFromPosition(BoardPosition position, bool fromWhitePerspective = true);
+        void DrawPiecesFromPosition(BoardArray position, bool fromWhitePerspective = true);
         
     public:
-        void RenderPosition(BoardPosition position, bool fromWhitePerspective = true);
+        void RenderPosition(BoardArray position, bool fromWhitePerspective = true);
         Renderer2D(int boardSquareSize = 50);
         ~Renderer2D();
 };

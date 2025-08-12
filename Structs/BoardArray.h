@@ -1,15 +1,15 @@
 #include <iostream>
 #include <stdint.h>
 
-#include "../../Enums/PieceTypes.h"
+#include "../Enums/PieceTypes.h"
 
-#ifndef GUI_BOARDPOSITION_H
-#define GUI_BOARDPOSITION_H
+#ifndef GUI_BOARDARRAY_H
+#define GUI_BOARDARRAY_H
 
 
 
-struct BoardPosition {
-    uint8_t Pieces[8][8] = {  {PieceTypes::NONE}  };
+struct BoardArray {
+    uint8_t Pieces[8][8];
     void Output(){
         std::cout<<"position output began\n";
         for(int row=0; row<8; row++){
@@ -22,7 +22,7 @@ struct BoardPosition {
         std::cout<<"position output ended\n";
     }
 
-    BoardPosition(){
+    BoardArray(){
         for(int i=0; i<8; i++){
             for(int j=0; j<8; j++){
                 Pieces[i][j] = PieceTypes::NONE;

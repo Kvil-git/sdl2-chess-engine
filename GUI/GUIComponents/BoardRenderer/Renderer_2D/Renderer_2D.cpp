@@ -4,7 +4,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "../../WindowGUIOnly/WindowManager/WindowManager.h"
-#include "../../../Enums/PieceTypes.h"
+#include "../../../../Enums/PieceTypes.h"
 
 
 Renderer2D::Renderer2D(int squareSize){
@@ -77,7 +77,7 @@ void Renderer2D::DrawPieceAt(int piece, SDL_Rect destination){
 }
 
 
-void Renderer2D::DrawPiecesFromPositionFromWhitePerspective(BoardPosition position){
+void Renderer2D::DrawPiecesFromPositionFromWhitePerspective(BoardArray position){
     for(int row=0; row<8; row++) {
         for(int column=0; column<8; column++) {
 
@@ -95,7 +95,7 @@ void Renderer2D::DrawPiecesFromPositionFromWhitePerspective(BoardPosition positi
     }
 }
 
-void Renderer2D::DrawPiecesFromPositionFromBlackPerspective(BoardPosition position){
+void Renderer2D::DrawPiecesFromPositionFromBlackPerspective(BoardArray position){
         for(int row=0; row<8; row++) {
         for(int column=0; column<8; column++) {
 
@@ -113,7 +113,7 @@ void Renderer2D::DrawPiecesFromPositionFromBlackPerspective(BoardPosition positi
     }
 }
 
-void Renderer2D::DrawPiecesFromPosition(BoardPosition position, bool fromWhitePerspective){
+void Renderer2D::DrawPiecesFromPosition(BoardArray position, bool fromWhitePerspective){
     if(fromWhitePerspective){
         DrawPiecesFromPositionFromWhitePerspective(position);
         return;
@@ -126,7 +126,7 @@ void Renderer2D::DrawPiecesFromPosition(BoardPosition position, bool fromWhitePe
 
 
 
-void Renderer2D::RenderPosition(BoardPosition position, bool fromWhitePerspective){
+void Renderer2D::RenderPosition(BoardArray position, bool fromWhitePerspective){
     this->DrawBoard(fromWhitePerspective);
     this->DrawPiecesFromPosition(position, fromWhitePerspective);
     return;

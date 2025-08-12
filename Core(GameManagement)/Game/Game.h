@@ -1,6 +1,6 @@
 #include <stack>
 #include <string>
-#include "../Move/Move.h"
+#include "../../Structs/Move.h"
 #include "../../Enums/GameResults.h"
 #include "../../Enums/PlayerColors.h"
 
@@ -27,8 +27,6 @@ class Game {
         
     public:
         GameResults gameResult = GameStillGoing;
-
-
         
         Game(std::string startingFEN, int clockTime, int clockIncrement, PlayerColors playerColor);
         Game(int clockTime, int clockIncrement, PlayerColors playerColor);

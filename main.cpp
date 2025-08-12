@@ -3,10 +3,10 @@
 #include <SDL2/SDL.h>
 
 #include "GUI/GUITypes/WindowGUI/WindowGUI_2D/WindowGUI_2D.h"
-#include "GUI/Functions/PositionConverting/PositionConvertingFunctions.h"
 #include "GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.h"
 #include "GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.h"
 
+#include "Functions/PositionConvertingFunctions.h"
 
 bool init();
 void kill();
@@ -29,10 +29,10 @@ int main(int argc, char** args) {
 
 	
 	std::cout<<"default fen: |"<<defaultFEN<<"\n";
-	BoardPosition defaultPosition = PositionConverting::FENToBoardPosition(defaultFEN);
+	BoardArray defaultPosition = PositionConverting::FENToBoardArray(defaultFEN);
 	defaultPosition.Output();
 
-	std::cout<<"converted and reconverted back fen: "<< PositionConverting::BoardPositionToFEN(defaultPosition)<<"\n\n";
+	std::cout<<"converted and reconverted back fen: "<< PositionConverting::BoardArrayToFEN(defaultPosition)<<"\n\n";
 
 	SDL_Window* window = windowManager.GetWindow();
 

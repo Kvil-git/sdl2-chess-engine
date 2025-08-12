@@ -1,4 +1,4 @@
-#include "../../../GameInstances/BoardPosition/BoardPosition.h"
+#include "../../../../Structs/BoardArray.h"
 
 
 #ifndef GUI_BOARDRENDERER_H
@@ -8,10 +8,10 @@
 class BoardRenderer {
     private:
         virtual void DrawBoard(bool fromWhitePerspective = true) = 0;
-        virtual void DrawPiecesFromPosition(BoardPosition position, bool fromWhitePerspective = true) = 0;
+        virtual void DrawPiecesFromPosition(BoardArray position, bool fromWhitePerspective = true) = 0;
 
     public:
-        virtual void RenderPosition(BoardPosition position, bool fromWhitePerspective = true) = 0;
+        virtual void RenderPosition(BoardArray position, bool fromWhitePerspective = true) = 0;
         virtual ~BoardRenderer() = default;
 };
 

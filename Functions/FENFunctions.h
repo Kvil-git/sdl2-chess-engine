@@ -1,4 +1,4 @@
-#include "../../Enums/PieceTypes.h"
+#include "../Enums/PieceTypes.h"
 
 #ifndef FEN_FUNCTIONS_H
 #define FEN_FUNCTIONS_H
@@ -18,8 +18,9 @@ int PieceIdByFEN(char pieceFEN){
         case 'r': return BlackRook;
         case 'q': return BlackQueen;
         case 'k': return BlackKing;
+        
+        default:  return NONE;
     }
-    return NONE;
 }
 
 inline char FENCharByPieceId(int pieceId){
