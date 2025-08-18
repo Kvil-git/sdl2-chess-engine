@@ -1,8 +1,8 @@
 #include <stack>
 #include <string>
 #include "../../Structs/Move.h"
-#include "../../Enums/GameResults.h"
-#include "../../Enums/PlayerColors.h"
+#include "../../Enums/GameResult.h"
+#include "../../Enums/PlayerColor.h"
 
 #ifndef GUI_GAME_H
 #define GUI_GAME_H
@@ -13,8 +13,8 @@ class Game {
         std::stack<Move> MoveList;
         std::string currentFEN = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
 
-        bool sideToMove;
-        PlayerColors playerColor;
+        bool sideToMove = PlayerColor::White;
+        const PlayerColor playerColor = PlayerColor::White;
 
         int ClockTime;
         int ClockIncrement;
@@ -26,11 +26,12 @@ class Game {
 
         
     public:
-        GameResults gameResult = GameStillGoing;
+        GameStatus gameStatus = GameStatus::GameStillGoing;
         
-        Game(std::string startingFEN, int clockTime, int clockIncrement, PlayerColors playerColor);
-        Game(int clockTime, int clockIncrement, PlayerColors playerColor);
-        Game(PlayerColors playerColor);
+        Game(std::string startingFEN, int clockTime, int clockIncrement, const PlayerColor playerColor) : playerColor(playerColor) {};
+        Game(int clockTime, int clockIncrement, const PlayerColor playerColor) : playerColor(playerColor) {};
+        Game(const PlayerColor playerColor) : playerColor(playerColor) {};
+        Game() = default;
 
         void MakeMove(Move);
         void UndoLastMove();

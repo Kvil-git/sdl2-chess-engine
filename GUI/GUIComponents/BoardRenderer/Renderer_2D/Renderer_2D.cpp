@@ -4,7 +4,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "../../WindowGUIOnly/WindowManager/WindowManager.h"
-#include "../../../../Enums/PieceTypes.h"
+#include "../../../../Enums/PieceType.h"
 
 
 Renderer2D::Renderer2D(int squareSize){
@@ -15,6 +15,12 @@ Renderer2D::Renderer2D(int squareSize){
 
     WindowManager& WindowManager = WindowManager::GetInstance();
     SDL_Renderer* renderer = WindowManager.GetRenderer();
+
+
+    std::string PieceNames[6] = {
+        "pawn", "knight", "bishop", "rook", "queen", "king"
+    };
+
 
     for(int piece = 0; piece < 12; piece++){		
 		bool isPieceWhite = piece < 6;
@@ -82,7 +88,7 @@ void Renderer2D::DrawPiecesFromPositionFromWhitePerspective(BoardArray position)
         for(int column=0; column<8; column++) {
 
             int currentPiece = position.Pieces[row][column];
-            if(currentPiece == PieceTypes::NONE) continue;
+            if(currentPiece == PieceType::NONE) continue;
 
             SDL_Rect currentPieceDestination;
             currentPieceDestination.x = squareSize * column;
@@ -100,7 +106,7 @@ void Renderer2D::DrawPiecesFromPositionFromBlackPerspective(BoardArray position)
         for(int column=0; column<8; column++) {
 
             int currentPiece = position.Pieces[row][column];
-            if(currentPiece == PieceTypes::NONE) continue;
+            if(currentPiece == PieceType::NONE) continue;
 
             SDL_Rect currentPieceDestination;
             currentPieceDestination.x = squareSize * column;

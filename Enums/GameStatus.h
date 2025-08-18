@@ -1,9 +1,8 @@
+#ifndef ENUMS_GAMESTATUS
+#define ENUMS_GAMESTATUS
 
-#ifndef GUI_ENUMS_GAMERESULTS
-#define GUI_ENUMS_GAMERESULTS
 
-
-enum GameResults {
+enum GameStatus {
     GameStillGoing = -1,
     WhiteWin = 1,
     BlackWin = 0,

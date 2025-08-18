@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdint.h>
 
-#include "../Enums/PieceTypes.h"
+#include "../Enums/PieceType.h"
 
 #ifndef GUI_BOARDARRAY_H
 #define GUI_BOARDARRAY_H
@@ -25,7 +25,7 @@ struct BoardArray {
     BoardArray(){
         for(int i=0; i<8; i++){
             for(int j=0; j<8; j++){
-                Pieces[i][j] = PieceTypes::NONE;
+                Pieces[i][j] = PieceType::NONE;
             }
         }
     }

@@ -12,10 +12,6 @@ class Renderer2D : public BoardRenderer {
     private:
         int squareSize;
         SDL_Texture* PieceTextures[12];
-        std::string PieceNames[6] = {
-            "pawn", "knight", "bishop", "rook", "queen", "king"
-        };
-
 
         void DrawPiecesFromPositionFromWhitePerspective(BoardArray position);
         void DrawPiecesFromPositionFromBlackPerspective(BoardArray position);

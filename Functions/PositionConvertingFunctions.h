@@ -3,7 +3,7 @@
 #include <vector>
 #include "../Structs/BoardArray.h"
 #include "../Structs/Move.h"
-#include "../Enums/PieceTypes.h"
+#include "../Enums/PieceType.h"
 #include "FENFunctions.h"
 
 #include "StringFunctions.cpp"
@@ -31,7 +31,7 @@ namespace PositionConverting{
                 }
 
                 int pieceIdOfCurrentChar = PieceIdByFEN(currentChar);
-                if(pieceIdOfCurrentChar == PieceTypes::NONE){
+                if(pieceIdOfCurrentChar == PieceType::NONE){
                     continue;
                 }
 

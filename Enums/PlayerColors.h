@@ -1,11 +1,10 @@
+#ifndef ENUMS_PLAYERCOLOR
+#define ENUMS_PLAYERCOLOR
 
-#ifndef GUI_ENUMS_PLAYERCOLORS
-#define GUI_ENUMS_PLAYERCOLORS
 
-
-enum PlayerColors {
-    White = 1,
-    Black = 0
+enum PlayerColor {
+    White = 0,
+    Black = 1
 };
 
 #endif

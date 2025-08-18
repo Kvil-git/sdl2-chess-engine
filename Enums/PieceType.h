@@ -1,8 +1,8 @@
-#ifndef GUI_ENUMS_PIECETYPES
-#define GUI_ENUMS_PIECETYPES
+#ifndef ENUMS_PIECETYPE
+#define ENUMS_PIECETYPE
 
 
-enum PieceTypes{
+enum PieceType {
     WhitePawn = 0,
     WhiteKnight = 1,
     WhiteBishop = 2,
@@ -18,6 +18,15 @@ enum PieceTypes{
     BlackKing = 11,
     NONE = 12,
     
+};
+
+enum BoardArrayPieceIndex {
+    Pawn = 0,
+    Knight = 1,
+    Bishop = 2,
+    Rook = 3,
+    Queen = 4,
+    King = 5
 };
 
 

@@ -1,4 +1,4 @@
-#include "../Enums/PieceTypes.h"
+#include "../Enums/PieceType.h"
 
 #ifndef FEN_FUNCTIONS_H
 #define FEN_FUNCTIONS_H
