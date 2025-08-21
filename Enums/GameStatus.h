@@ -2,7 +2,7 @@
 #define ENUMS_GAMESTATUS
 
 
-enum GameStatus {
+enum class GameStatus {
     GameStillGoing = -1,
     WhiteWin = 1,
     BlackWin = 0,

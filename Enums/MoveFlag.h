@@ -5,7 +5,7 @@
 
 
 
-enum MoveFlag {
+enum class MoveFlag {
     SilentMove = 0,
     ShortCastling = 1,
     LongCastling = 2,

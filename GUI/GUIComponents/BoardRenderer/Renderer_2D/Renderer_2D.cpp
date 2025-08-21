@@ -88,7 +88,7 @@ void Renderer2D::DrawPiecesFromPositionFromWhitePerspective(BoardArray position)
         for(int column=0; column<8; column++) {
 
             int currentPiece = position.Pieces[row][column];
-            if(currentPiece == ChessPiece::NONE) continue;
+            if(currentPiece == static_cast<int>(ChessPiece::NONE) ) continue;
 
             SDL_Rect currentPieceDestination;
             currentPieceDestination.x = squareSize * column;
@@ -106,7 +106,7 @@ void Renderer2D::DrawPiecesFromPositionFromBlackPerspective(BoardArray position)
         for(int column=0; column<8; column++) {
 
             int currentPiece = position.Pieces[row][column];
-            if(currentPiece == ChessPiece::NONE) continue;
+            if(currentPiece == static_cast<int>(ChessPiece::NONE)) continue;
 
             SDL_Rect currentPieceDestination;
             currentPieceDestination.x = squareSize * column;

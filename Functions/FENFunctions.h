@@ -3,23 +3,23 @@
 #ifndef FEN_FUNCTIONS_H
 #define FEN_FUNCTIONS_H
 
-int PieceIdByFEN(char pieceFEN){
+ChessPiece PieceByFEN(char pieceFEN){
     switch(pieceFEN){
-        case 'P': return WhitePawn;
-        case 'N': return WhiteKnight;
-        case 'B': return WhiteBishop;
-        case 'R': return WhiteRook;
-        case 'Q': return WhiteQueen;
-        case 'K': return WhiteKing;
+        case 'P': return ChessPiece::WhitePawn;
+        case 'N': return ChessPiece::WhiteKnight;
+        case 'B': return ChessPiece::WhiteBishop;
+        case 'R': return ChessPiece::WhiteRook;
+        case 'Q': return ChessPiece::WhiteQueen;
+        case 'K': return ChessPiece::WhiteKing;
 
-        case 'p': return BlackPawn;
-        case 'n': return BlackKnight;
-        case 'b': return BlackBishop;
-        case 'r': return BlackRook;
-        case 'q': return BlackQueen;
-        case 'k': return BlackKing;
+        case 'p': return ChessPiece::BlackPawn;
+        case 'n': return ChessPiece::BlackKnight;
+        case 'b': return ChessPiece::BlackBishop;
+        case 'r': return ChessPiece::BlackRook;
+        case 'q': return ChessPiece::BlackQueen;
+        case 'k': return ChessPiece::BlackKing;
         
-        default:  return NONE;
+        default:  return ChessPiece::NONE;
     }
 }
 

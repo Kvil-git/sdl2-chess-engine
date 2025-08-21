@@ -2,7 +2,7 @@
 #define ENUMS_PIECETYPE
 
 
-enum ChessPiece {
+enum class ChessPiece {
     WhitePawn = 0,
     WhiteKnight = 1,
     WhiteBishop = 2,
@@ -20,7 +20,7 @@ enum ChessPiece {
     
 };
 
-enum PieceType {
+enum class PieceType {
     Pawn = 0,
     Knight = 1,
     Bishop = 2,

@@ -478,7 +478,6 @@ std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bo
 
     switch(piece) {
         case PieceType::Bishop:
-            return GetBishopMoves();
             break;
         case PieceType::Rook:
             break;
