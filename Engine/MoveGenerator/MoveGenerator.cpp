@@ -6,6 +6,7 @@
 #include "../../Functions/BitManipulation.h"
 #include "../../Enums/PlayerColors.h"
 #include "../../Enums/PieceType.h"
+#include "../../Enums/MoveFlag.h"
 
 #include <stdint.h>
 #include <vector>
@@ -466,12 +467,37 @@ void MoveGenerator::InitPawnArrays() {
 
 
 
-
+bool IsSlidingPiece(const PieceType piece){
+    return (piece == PieceType::Bishop || piece == PieceType::Rook || piece == PieceType::Queen);
+}
 
 std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece){
     std::vector<Move> output;
-    switch(piece) {
 
+    
+
+    switch(piece) {
+        case PieceType::Bishop:
+            return GetBishopMoves();
+            break;
+        case PieceType::Rook:
+            break;
+        case PieceType::Queen:
+
+
+            break;
+        
+
+        case PieceType::Knight:
+            break;
+
+        case PieceType::Pawn:
+            break;
+
+        case PieceType::King:
+            break;
+
+        
     }
 }
 
@@ -485,7 +511,8 @@ const bitboard CastlingMasks[2][2] = {
 };
 //white king castled from e1 to either g1 or c1, black king from e8 to g8 or c8 
 const Move KingCastlingMoves[2][2] = {
-    {Move(4, 6), Move(4, 2)}, {Move(60, 62), Move(60, 58)}
+    {Move(4, 6, MoveFlag::ShortCastling), Move(4, 2, MoveFlag::LongCastling)},
+    {Move(60, 62, MoveFlag::ShortCastling), Move(60, 58, MoveFlag::LongCastling)}
 };
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){
