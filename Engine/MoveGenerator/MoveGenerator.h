@@ -148,29 +148,42 @@ class MoveGenerator {
             {0x00848804b8018100, 58, 64}
         };
 
-        // Attack tables
-        std::vector<bitboard> RookAttackTable[64];
-        std::vector<bitboard> BishopAttackTable[64];
+        
 
-        // Masks for rook and bishop
-        std::vector<bitboard> RookMasks[64];
-        std::vector<bitboard> BishopMasks[64];
+        std::vector<bitboard> RookMoves[64];
+        std::vector<bitboard> BishopMoves[64];
+        
+        bitboard RookMasks[64];
+        bitboard BishopMasks[64];
+
+        bitboard GetRookMoves(int sq, bitboard occupancy);
+        bitboard GetBishopMoves(int sq, bitboard occupancy);
 
 
 
 
-        void Init();
+        bitboard KnightMoves[64];
+
+        bitboard KingMoves[64];
+
+        bitboard PawnMoves[2][64];
+        bitboard PawnCaptures[2][64];
+
+        void InitSliderMoveTables();
+        void InitSliderPieceMasks();
+        void InitSlidingPieceArrays();
+        void InitKnightArrays();
+        void InitKingArrays();
+        void InitPawnArrays();
 
         std::vector<Move> GenerateCaptures(const Board& board, bool sideToMove);
         std::vector<Move> GenerateChecks(const Board& board, const PieceType piece);
-        std::vector<Move> GeneratePieceMoves(const Board& board, const PieceType piece);
 
 
     public:
-        MoveGenerator() {
-            Init();
-        };
-        std::vector<Move> GenerateLegalMoves(const Board& board, bool sideToMove);
+        MoveGenerator();
+        std::vector<Move> GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece);
+        std::vector<Move> GeneratePieceAttacks(const Board& board, bool sideToMove, const PieceType piece);
 };
 
 
