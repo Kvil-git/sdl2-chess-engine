@@ -30,12 +30,12 @@ namespace PositionConverting{
                     continue;
                 }
 
-                int pieceIdOfCurrentChar = PieceIdByFEN(currentChar);
+                ChessPiece pieceIdOfCurrentChar = PieceByFEN(currentChar);
                 if(pieceIdOfCurrentChar == ChessPiece::NONE){
                     continue;
                 }
 
-                output.Pieces[row][column] = pieceIdOfCurrentChar;
+                output.Pieces[row][column] = static_cast<uint8_t>(pieceIdOfCurrentChar);
             }
         }
 

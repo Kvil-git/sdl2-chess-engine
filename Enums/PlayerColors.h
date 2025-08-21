@@ -2,7 +2,7 @@
 #define ENUMS_PLAYERCOLOR
 
 
-enum PlayerColor {
+enum class PlayerColor {
     White = 0,
     Black = 1
 };
