@@ -466,18 +466,27 @@ void MoveGenerator::InitPawnArrays() {
 
 
 
-const bitboard CastlingMasks[2][4] = {
+const bitboard CastlingMasks[2][2] = {
     {0x60, 0xe}, {0x6000000000000000, 0xe00000000000000}
+};
+//white king castled from e1 to either g1 or c1, black king from e8 to g8 or c8 
+const Move KingCastlingMoves[2][2] = {
+    {Move(4, 6), Move(4, 2)}, {Move(60, 62), Move(60, 58)}
 };
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){
     std::vector<Move> output;
-    if(sideToMove == PlayerColor::White) {
+    for(int castlingType = 0; castlingType < 2; castlingType++){
         
-    } else {
+        if(board.castlingRights[sideToMove][castlingType] == false) continue;
 
+        // if there are pieces present between rook and king, continue
+        if((CastlingMasks[sideToMove][castlingType] & board.AllPieces) != 0) continue;
+
+        output.push_back(KingCastlingMoves[sideToMove][castlingType]);
     }
 
+    return output;
 }
 
 
