@@ -6,12 +6,10 @@
 
 typedef uint64_t bitboard;
 struct Board {
-    bitboard PiecePositions[2][6]; //indexed with player count and piecetype
-    bitboard emptyBitboard = 0;
-    bitboard occupiedBitboard = 18446744073709551615;
-    
+    bitboard PiecePositions[2][6]; //indexed with player color and piecetype
+
     bool sideToMove = 1;
-    uint8_t castlingRights = 0b11110000; //first two bits are white castling rights, the next two bits are black castling rights
+    bool castlingRights[2][2] = { {0} };
     uint8_t enPassantSquare = 0;
 
     int halfMoveClock = 0; 
