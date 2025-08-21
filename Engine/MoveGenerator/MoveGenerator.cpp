@@ -466,10 +466,16 @@ void MoveGenerator::InitPawnArrays() {
 
 
 
+
+
 std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece){
     std::vector<Move> output;
-    if(piece == PieceType::Bishop);
+    switch(piece) {
+
+    }
 }
+
+
 
 
 
@@ -484,9 +490,15 @@ const Move KingCastlingMoves[2][2] = {
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){
     std::vector<Move> output;
+
+    bool castlingRights[2][2] = {
+        {board.castlingRights.WhiteShortCastling, board.castlingRights.WhiteLongCastling},
+        {board.castlingRights.BlackShortCastling, board.castlingRights.BlackLongCastling}
+    };
+
     for(int castlingType = 0; castlingType < 2; castlingType++){
         
-        if(board.castlingRights[sideToMove][castlingType] == false) continue;
+        if(castlingRights[sideToMove][castlingType] == false) continue;
 
         // if there are pieces present between rook and king, continue
         if((CastlingMasks[sideToMove][castlingType] & board.AllPieces) != 0) continue;

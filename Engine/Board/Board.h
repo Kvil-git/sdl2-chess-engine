@@ -1,6 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include "../../Structs/CastlingRights.h"
 #include <stdint.h>
 #include "Move.h"
 
@@ -12,7 +13,7 @@ struct Board {
     bitboard AllPieces;
 
     bool sideToMove = 1;
-    bool castlingRights[2][2] = { {0} };
+    CastlingRights castlingRights;
     uint8_t enPassantSquare = 0;
 
     int halfMoveClock = 0; 
