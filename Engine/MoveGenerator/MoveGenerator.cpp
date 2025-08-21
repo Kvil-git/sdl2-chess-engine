@@ -5,6 +5,7 @@
 #include "MoveGenerator.h"
 #include "../../Functions/BitManipulation.h"
 #include "../../Enums/PlayerColors.h"
+#include "../../Enums/PieceType.h"
 
 #include <stdint.h>
 #include <vector>
@@ -461,6 +462,13 @@ void MoveGenerator::InitPawnArrays() {
             }
         }
     }
+}
+
+
+
+std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece){
+    std::vector<Move> output;
+    if(piece == )
 }
 
 
