@@ -8,6 +8,9 @@ typedef uint64_t bitboard;
 struct Board {
     bitboard PiecePositions[2][6]; //indexed with player color and piecetype
 
+    bitboard AllPiecesOfOneColor[2];
+    bitboard AllPieces;
+
     bool sideToMove = 1;
     bool castlingRights[2][2] = { {0} };
     uint8_t enPassantSquare = 0;

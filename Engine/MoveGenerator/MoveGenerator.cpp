@@ -466,11 +466,9 @@ void MoveGenerator::InitPawnArrays() {
 
 
 
-const bitboard WhiteKingShortCastlingMask = 0x60;
-const bitboard BlackKingShortCastlingMask = 0x6000000000000000;
-
-const bitboard WhiteKingLongCastlingMask = 0xe;
-const bitboard BlackKingLongCastlingMask = 0xe00000000000000;
+const bitboard CastlingMasks[2][4] = {
+    {0x60, 0xe}, {0x6000000000000000, 0xe00000000000000}
+};
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){
     std::vector<Move> output;
