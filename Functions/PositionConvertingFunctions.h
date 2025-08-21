@@ -31,7 +31,7 @@ namespace PositionConverting{
                 }
 
                 int pieceIdOfCurrentChar = PieceIdByFEN(currentChar);
-                if(pieceIdOfCurrentChar == PieceType::NONE){
+                if(pieceIdOfCurrentChar == ChessPiece::NONE){
                     continue;
                 }
 

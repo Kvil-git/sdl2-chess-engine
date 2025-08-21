@@ -468,7 +468,7 @@ void MoveGenerator::InitPawnArrays() {
 
 std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece){
     std::vector<Move> output;
-    if(piece == )
+    if(piece == PieceType::Bishop);
 }
 
 
