@@ -1,7 +1,9 @@
-#include <stdint.h>
-
 #ifndef GUI_MOVE_H
 #define GUI_MOVE_H
+
+
+#include <stdint.h>
+#include "../Enums/MoveFlag.h"
 
 
 struct Move {
@@ -10,10 +12,10 @@ struct Move {
 
     uint8_t moveFlag;
 
-    Move(int fromSquare, int toSquare, uint8_t moveFlag = 0){
+    Move(int fromSquare, int toSquare, MoveFlag moveFlag = MoveFlag::SilentMove){
         this->fromSquare = fromSquare;
         this->toSquare = toSquare;
-        this->moveFlag = moveFlag;
+        this->moveFlag = static_cast<int>(moveFlag);
     };
 };
 
