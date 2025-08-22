@@ -471,7 +471,7 @@ bool IsSlidingPiece(const PieceType piece){
     return (piece == PieceType::Bishop || piece == PieceType::Rook || piece == PieceType::Queen);
 }
 
-void MoveGenerator::FillPieceMoveArrays(const Board& board, bool sideToMove, const PieceType piece, std::vector<Move> &silentMoves, std::vector<Move> &captures)){
+void MoveGenerator::FillPieceMoveArrays(const Board& board, bool sideToMove, const PieceType piece, std::vector<Move> &silentMoves, std::vector<Move> &captures){
 
     std::vector<int> pieceSquares = GetSetBitIndices(board.PiecePositions[sideToMove][static_cast<int>(piece)]);
 
