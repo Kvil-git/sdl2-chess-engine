@@ -38,8 +38,7 @@ class MoveGenerator {
 
     public:
         MoveGenerator();
-        std::vector<Move> GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece);
-        std::vector<Move> GeneratePieceCaptures(const Board& board, bool sideToMove, const PieceType piece);
+        void FillPieceMoveArrays(const Board& board, bool sideToMove, const PieceType piece, std::vector<Move> &silentMoves, std::vector<Move> &captures);
         std::vector<Move> GenerateCastlingMoves(const Board& board, bool sideToMove);
 };
 

@@ -471,85 +471,77 @@ bool IsSlidingPiece(const PieceType piece){
     return (piece == PieceType::Bishop || piece == PieceType::Rook || piece == PieceType::Queen);
 }
 
-std::vector<Move> MoveGenerator::GeneratePieceSilentMoves(const Board& board, bool sideToMove, const PieceType piece){
-    std::vector<Move> output;
+void MoveGenerator::FillPieceMoveArrays(const Board& board, bool sideToMove, const PieceType piece, std::vector<Move> &silentMoves, std::vector<Move> &captures)){
 
     std::vector<int> pieceSquares = GetSetBitIndices(board.PiecePositions[sideToMove][static_cast<int>(piece)]);
 
-    std::vector<bitboard> moveBitboards;
+    std::vector<bitboard> silentMoveBitboards;
     std::vector<uint8_t> fromSquares;
 
 
-    for(int i=0; i<pieceSquares.size(); i++){
-        int square = pieceSquares[i];
+    bitboard moveBitboard = 0;
+    bitboard captureBitboard = 0;
 
+
+    for (int square : pieceSquares) {
         fromSquares.push_back(square);
 
         const bitboard occupancy = board.AllPieces;
         const bitboard capturable = board.AllPiecesOfOneColor[!sideToMove];
 
-        const bitboard nonCapturable = occupancy & (~capturable);
-        const bitboard nonOccupied = ~occupancy;
-
         switch(piece) {
             case PieceType::Bishop:
-                bitboard bishopMoves = GetBishopMoves(square, nonCapturable) & nonOccupied;
-                moveBitboards.push_back(bishopMoves);
+                moveBitboard = GetBishopMoves(square, occupancy);
+                captureBitboard = moveBitboard & capturable;
+                moveBitboard &= ~occupancy;
                 break;
 
             case PieceType::Rook:
-                bitboard rookMoves = GetRookMoves(square, nonCapturable) & nonOccupied;
-                moveBitboards.push_back(rookMoves);
+                moveBitboard = GetRookMoves(square, occupancy);
+                captureBitboard = moveBitboard & capturable;
+                moveBitboard &= ~occupancy;
                 break;
 
             case PieceType::Queen:
-                bitboard bishopMoves = GetBishopMoves(square, nonCapturable);
-                bitboard rookMoves = GetRookMoves(square, nonCapturable);
-
-                moveBitboards.push_back((bishopMoves & rookMoves) & nonOccupied);
+                moveBitboard = GetBishopMoves(square, occupancy) | GetRookMoves(square, occupancy);
+                captureBitboard = moveBitboard & capturable;
+                moveBitboard &= ~occupancy;
                 break;
-            
 
             case PieceType::Knight:
-                bitboard knightMoves = KnightMoves[square] & nonOccupied;
-                moveBitboards.push_back(knightMoves);
+                moveBitboard = KnightMoves[square] & ~occupancy;
+                captureBitboard = KnightMoves[square] & capturable;
                 break;
 
             case PieceType::Pawn:
-                bitboard pawnMoves = PawnMoves[sideToMove][square] & nonOccupied;
-                moveBitboards.push_back(pawnMoves);
+                moveBitboard = PawnMoves[sideToMove][square] & ~occupancy;
+                captureBitboard = PawnCaptures[sideToMove][square] & capturable;
                 break;
 
             case PieceType::King:
-                bitboard kingMoves = KingMoves[square] & nonOccupied;
-                moveBitboards.push_back(kingMoves);
+                moveBitboard = KingMoves[square] & ~occupancy;
+                captureBitboard = KingMoves[square] & capturable;
                 break;
-            
+
             default:
                 std::cerr << "trying to generate moves of with non-existent piece type. "
                           << "piece type = |" << piece << "| "
                           << ", side to move = |" << sideToMove << std::endl;
-                break;
+                continue;
         }
 
-    }
 
-    
-    std::vector<Move> output;
-    for(int i=0; i<moveBitboards.size(); i++){
-        std::vector<int> possibleDestinationSquares = GetSetBitIndices(moveBitboards[i]);
-        
-        for(int j=0; j<possibleDestinationSquares.size(); j++){
-            int toSquare = possibleDestinationSquares[j];
-            Move currentMove = Move(fromSquares[j], toSquare, MoveFlag::SilentMove);
+        std::vector<int> silentDestinations = GetSetBitIndices(moveBitboard);
+        for (int toSquare : silentDestinations) {
+            silentMoves.push_back(Move(square, toSquare, MoveFlag::SilentMove));
+        }
+
+        std::vector<int> captureDestinations = GetSetBitIndices(captureBitboard);
+        for (int toSquare : captureDestinations) {
+            captures.push_back(Move(square, toSquare, MoveFlag::Capture));
         }
     }
-
-    return output;
-
-
 }
-
 
 
 
