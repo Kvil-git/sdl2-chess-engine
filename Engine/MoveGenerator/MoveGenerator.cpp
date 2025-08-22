@@ -552,8 +552,8 @@ const bitboard CastlingMasks[2][2] = {
 };
 //white king castled from e1 to either g1 or c1, black king from e8 to g8 or c8 
 const Move KingCastlingMoves[2][2] = {
-    {Move(4, 6, MoveFlag::ShortCastling), Move(4, 2, MoveFlag::LongCastling)},
-    {Move(60, 62, MoveFlag::ShortCastling), Move(60, 58, MoveFlag::LongCastling)}
+    {Move(4, 6, MoveFlag::ShortCastling, PieceType::King), Move(4, 2, MoveFlag::LongCastling, PieceType::King)},
+    {Move(60, 62, MoveFlag::ShortCastling, PieceType::King), Move(60, 58, MoveFlag::LongCastling, PieceType::King)}
 };
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){

@@ -7,15 +7,16 @@
 
 
 struct Move {
-    uint8_t fromSquare;
-    uint8_t toSquare;
+    uint8_t fromSquare : 4;
+    uint8_t toSquare : 4;
+    uint8_t moveFlag : 4;
+    uint8_t pieceType : 4;
 
-    uint8_t moveFlag;
-
-    Move(int fromSquare, int toSquare, MoveFlag moveFlag = MoveFlag::SilentMove){
+    Move(int fromSquare, int toSquare, MoveFlag moveFlag = MoveFlag::SilentMove, PieceType pieceType = PieceType::Pawn){
         this->fromSquare = fromSquare;
         this->toSquare = toSquare;
         this->moveFlag = static_cast<int>(moveFlag);
+        this->pieceType = static_cast<int>(pieceType);
     };
 };
 

@@ -7,18 +7,15 @@
 
 enum class MoveFlag {
     SilentMove = 0,
-    ShortCastling = 1,
+    ShortCastling  = 1,
     LongCastling = 2,
-    Capture = 3,
+    Capture        = 3,
     EnPassantCapture = 4,
     KnightPromotion = 5,
     BishopPromotion = 6,
     RookPromotion = 7,
     QueenPromotion = 8,
 };
-
-
-
 
 
 
