@@ -31,7 +31,7 @@ enum class PieceType {
 
 
 
-std::ostream& operator<<(std::ostream& out, const ChessPiece piece) {
+inline std::ostream& operator<<(std::ostream& out, const ChessPiece piece) {
     switch(piece) {
         case ChessPiece::WhitePawn:   out << "WhitePawn"; break;
         case ChessPiece::WhiteKnight: out << "WhiteKnight"; break;
@@ -50,7 +50,7 @@ std::ostream& operator<<(std::ostream& out, const ChessPiece piece) {
     return out;
 }
 
-std::ostream& operator<<(std::ostream& out, const PieceType type) {
+inline std::ostream& operator<<(std::ostream& out, const PieceType type) {
     switch(type) {
         case PieceType::Pawn:   out << "Pawn"; break;
         case PieceType::Knight: out << "Knight"; break;
