@@ -97,14 +97,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build//CMakeFiles/progress.marks"
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/Tests/Engine//CMakeFiles/progress.marks"
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/Engine/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/Engine/clean
 .PHONY : clean
 
 # The main clean target
@@ -113,92 +113,18 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/Engine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/Engine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
-
-#=============================================================================
-# Target rules for targets named SdlChessEngine
-
-# Build rule for target.
-SdlChessEngine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SdlChessEngine
-.PHONY : SdlChessEngine
-
-# fast build rule for target.
-SdlChessEngine/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/build
-.PHONY : SdlChessEngine/fast
-
-#=============================================================================
-# Target rules for targets named EngineTests
-
-# Build rule for target.
-EngineTests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 EngineTests
-.PHONY : EngineTests
-
-# fast build rule for target.
-EngineTests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/build
-.PHONY : EngineTests/fast
-
-Tests/Engine/MoveGeneratorTests.o: Tests/Engine/MoveGeneratorTests.cpp.o
-.PHONY : Tests/Engine/MoveGeneratorTests.o
-
-# target to build an object file
-Tests/Engine/MoveGeneratorTests.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o
-.PHONY : Tests/Engine/MoveGeneratorTests.cpp.o
-
-Tests/Engine/MoveGeneratorTests.i: Tests/Engine/MoveGeneratorTests.cpp.i
-.PHONY : Tests/Engine/MoveGeneratorTests.i
-
-# target to preprocess a source file
-Tests/Engine/MoveGeneratorTests.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.i
-.PHONY : Tests/Engine/MoveGeneratorTests.cpp.i
-
-Tests/Engine/MoveGeneratorTests.s: Tests/Engine/MoveGeneratorTests.cpp.s
-.PHONY : Tests/Engine/MoveGeneratorTests.s
-
-# target to generate assembly for a file
-Tests/Engine/MoveGeneratorTests.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.s
-.PHONY : Tests/Engine/MoveGeneratorTests.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -209,14 +135,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... EngineTests"
-	@echo "... SdlChessEngine"
-	@echo "... Tests/Engine/MoveGeneratorTests.o"
-	@echo "... Tests/Engine/MoveGeneratorTests.i"
-	@echo "... Tests/Engine/MoveGeneratorTests.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 .PHONY : help
 
 
@@ -228,6 +146,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

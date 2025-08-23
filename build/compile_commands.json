@@ -4,5 +4,11 @@
   "command": "/usr/bin/c++   -g -o CMakeFiles/SdlChessEngine.dir/main.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp\"",
   "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp",
   "output": "CMakeFiles/SdlChessEngine.dir/main.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp",
+  "output": "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o"
 }
 ]
