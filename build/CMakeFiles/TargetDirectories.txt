@@ -3,6 +3,3 @@
 /home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles/test.dir
 /home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles/edit_cache.dir
 /home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles/rebuild_cache.dir
-/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/Tests/Engine/CMakeFiles/test.dir
-/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/Tests/Engine/CMakeFiles/edit_cache.dir
-/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/Tests/Engine/CMakeFiles/rebuild_cache.dir

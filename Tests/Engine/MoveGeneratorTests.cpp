@@ -1,15 +1,17 @@
 #ifndef MOVE_GENERATOR_TESTS_CPP
 #define MOVE_GENERATOR_TESTS_CPP
 
-#include "MoveGenerator.h"
+#include "../../Engine/MoveGenerator/MoveGenerator.h"
 #include "../../Functions/BitManipulation.h"
-#include "../Board/Board.h"
+#include "../../Engine/Board/Board.h"
 #include "../../Enums/PieceType.h"
 #include "../../Structs/Move.h"
 #include <string>
 #include <iostream>
 #include <gtest/gtest.h>
+#include <stdint.h>
 
+using bitboard = uint64_t;
 
 void Printbitboard(bitboard bb, const std::string& title = "") {
     if (!title.empty()) {

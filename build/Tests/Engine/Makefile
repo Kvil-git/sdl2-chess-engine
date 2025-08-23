@@ -126,6 +126,92 @@ depend:
 	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
+# Convenience name for target.
+Tests/Engine/CMakeFiles/EngineTests.dir/rule:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tests/Engine/CMakeFiles/EngineTests.dir/rule
+.PHONY : Tests/Engine/CMakeFiles/EngineTests.dir/rule
+
+# Convenience name for target.
+EngineTests: Tests/Engine/CMakeFiles/EngineTests.dir/rule
+.PHONY : EngineTests
+
+# fast build rule for target.
+EngineTests/fast:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/build
+.PHONY : EngineTests/fast
+
+MoveGeneratorTests.o: MoveGeneratorTests.cpp.o
+.PHONY : MoveGeneratorTests.o
+
+# target to build an object file
+MoveGeneratorTests.cpp.o:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/MoveGeneratorTests.cpp.o
+.PHONY : MoveGeneratorTests.cpp.o
+
+MoveGeneratorTests.i: MoveGeneratorTests.cpp.i
+.PHONY : MoveGeneratorTests.i
+
+# target to preprocess a source file
+MoveGeneratorTests.cpp.i:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/MoveGeneratorTests.cpp.i
+.PHONY : MoveGeneratorTests.cpp.i
+
+MoveGeneratorTests.s: MoveGeneratorTests.cpp.s
+.PHONY : MoveGeneratorTests.s
+
+# target to generate assembly for a file
+MoveGeneratorTests.cpp.s:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/MoveGeneratorTests.cpp.s
+.PHONY : MoveGeneratorTests.cpp.s
+
+__/__/Engine/Board/Board.o: __/__/Engine/Board/Board.cpp.o
+.PHONY : __/__/Engine/Board/Board.o
+
+# target to build an object file
+__/__/Engine/Board/Board.cpp.o:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/Board/Board.cpp.o
+.PHONY : __/__/Engine/Board/Board.cpp.o
+
+__/__/Engine/Board/Board.i: __/__/Engine/Board/Board.cpp.i
+.PHONY : __/__/Engine/Board/Board.i
+
+# target to preprocess a source file
+__/__/Engine/Board/Board.cpp.i:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/Board/Board.cpp.i
+.PHONY : __/__/Engine/Board/Board.cpp.i
+
+__/__/Engine/Board/Board.s: __/__/Engine/Board/Board.cpp.s
+.PHONY : __/__/Engine/Board/Board.s
+
+# target to generate assembly for a file
+__/__/Engine/Board/Board.cpp.s:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/Board/Board.cpp.s
+.PHONY : __/__/Engine/Board/Board.cpp.s
+
+__/__/Engine/MoveGenerator/MoveGenerator.o: __/__/Engine/MoveGenerator/MoveGenerator.cpp.o
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.o
+
+# target to build an object file
+__/__/Engine/MoveGenerator/MoveGenerator.cpp.o:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/MoveGenerator/MoveGenerator.cpp.o
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.cpp.o
+
+__/__/Engine/MoveGenerator/MoveGenerator.i: __/__/Engine/MoveGenerator/MoveGenerator.cpp.i
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.i
+
+# target to preprocess a source file
+__/__/Engine/MoveGenerator/MoveGenerator.cpp.i:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/MoveGenerator/MoveGenerator.cpp.i
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.cpp.i
+
+__/__/Engine/MoveGenerator/MoveGenerator.s: __/__/Engine/MoveGenerator/MoveGenerator.cpp.s
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.s
+
+# target to generate assembly for a file
+__/__/Engine/MoveGenerator/MoveGenerator.cpp.s:
+	cd "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build" && $(MAKE) $(MAKESILENT) -f Tests/Engine/CMakeFiles/EngineTests.dir/build.make Tests/Engine/CMakeFiles/EngineTests.dir/__/__/Engine/MoveGenerator/MoveGenerator.cpp.s
+.PHONY : __/__/Engine/MoveGenerator/MoveGenerator.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -135,6 +221,16 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... EngineTests"
+	@echo "... MoveGeneratorTests.o"
+	@echo "... MoveGeneratorTests.i"
+	@echo "... MoveGeneratorTests.s"
+	@echo "... __/__/Engine/Board/Board.o"
+	@echo "... __/__/Engine/Board/Board.i"
+	@echo "... __/__/Engine/Board/Board.s"
+	@echo "... __/__/Engine/MoveGenerator/MoveGenerator.o"
+	@echo "... __/__/Engine/MoveGenerator/MoveGenerator.i"
+	@echo "... __/__/Engine/MoveGenerator/MoveGenerator.s"
 .PHONY : help
 
 

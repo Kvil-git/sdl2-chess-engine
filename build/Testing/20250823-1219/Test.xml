@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250823-1219-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.28.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="Kvil-PC"
+	OSRelease="6.8.0-71-generic"
+	OSVersion="#71-Ubuntu SMP PREEMPT_DYNAMIC Tue Jul 22 16:52:38 UTC 2025"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="140"
+	ProcessorCacheSize="8192"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="4"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="19778"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2810.6"
+	>
+	<Testing>
+		<StartDateTime>Aug 23 15:31 CEST</StartDateTime>
+		<StartTestTime>1755955894</StartTestTime>
+		<TestList>
+			<Test>./EngineTests</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>EngineTests</Name>
+			<Path>.</Path>
+			<FullName>./EngineTests</FullName>
+			<FullCommandLine>/home/kvil/Документы/coding\ projects/cpp/sdl\ chess\ engine/build/EngineTests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.0778171</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/kvil/Документы/coding\ projects/cpp/sdl\ chess\ engine/build/EngineTests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJy9VU1vEzEQvftXzHEjkd2mVG2zEoe2pBUqHyUJ4hDl4O5OsyaOvex4E9ojHLnyV7gg4Dds/hHebLNNWqE4QnRutt88z3sejQfP6hhCN1dKqBG0wSAZgqtMT6C1WADlwqDPBs06hnAm9SWX1Tmqqci0mqCyWDTNPL0HXiN9pad4hgozbnTWt/tsAN13r2ERw4fH/gWfqXKXWJDoCQbjqZBB8a34XfyYfyl+Ft+LX/PP869BpONSQZrpDxgZCqI0DSiWECVIZIscCYVByUhBp1o8uIt8mxQe7IRwyoXMM2SdT6klwxjwY86lMNegr8BYRoQplzlSyABISKt9UaNP4ga9BivFvE9ElICgEHbsepdZoXB69OJl5/kGoeC1YEINF2NOeGpsnY/mzeHe//Cm5eTNUqu1Z9fFn3MlRkl1dUm/iDfnm6DgtV3IjwUlOnUiX4E6kne1HjtR10Dw9l2I3+aIyon5DgneoZPbtsHcvF4CwTtwIT7hZGRN/kh93tprb9no0WqZ/zIG1vQ6mn8sdTTGeJm6sSPX4fVDuA9tm1LOKDDacNlgbp+DQZ41Yz1TbLD69/z1z4GMK//eTVbZxVGvV5m3X2X665Y+rXafgBRUvtolSj0LnafvNqNoq7dkzJZ2i+53ev0e+wN+cYlJ====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Aug 23 15:31 CEST</EndDateTime>
+		<EndTestTime>1755955894</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

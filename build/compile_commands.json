@@ -1,14 +1,44 @@
 [
 {
   "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/SdlChessEngine.dir/main.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp\"",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -g -o CMakeFiles/SdlChessEngine.dir/main.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp\"",
   "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp",
   "output": "CMakeFiles/SdlChessEngine.dir/main.cpp.o"
 },
 {
   "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
-  "command": "/usr/bin/c++   -g -o CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp\"",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -g -o CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp",
+  "output": "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -g -o CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp",
+  "output": "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++  -I/usr/include/SDL2 -I/usr/include/libpng16 -I/usr/include/webp -g -o CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp",
+  "output": "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++  -I\"/home/kvil/Документы/coding projects/cpp/sdl chess engine\" -I/usr/include/SDL2 -g -o CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp\"",
   "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp",
   "output": "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++  -I\"/home/kvil/Документы/coding projects/cpp/sdl chess engine\" -I/usr/include/SDL2 -g -o CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp",
+  "output": "CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o"
+},
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++  -I\"/home/kvil/Документы/coding projects/cpp/sdl chess engine\" -I/usr/include/SDL2 -g -o CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp",
+  "output": "CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o"
 }
 ]

@@ -1,0 +1,68 @@
+Start testing: Aug 23 15:31 CEST
+----------------------------------------------------------
+1/1 Testing: EngineTests
+1/1 Test: EngineTests
+Command: "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/EngineTests"
+Directory: /home/kvil/Документы/coding projects/cpp/sdl chess engine/build
+"EngineTests" start time: Aug 23 15:31 CEST
+Output:
+----------------------------------------------------------
+[==========] Running 9 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 9 tests from MoveGeneratorTest
+[ RUN      ] MoveGeneratorTest.PawnMoves
+/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp:70: Failure
+Expected equality of these values:
+  silentMoves.size()
+    Which is: 0
+  2
+
+[  FAILED  ] MoveGeneratorTest.PawnMoves (1 ms)
+[ RUN      ] MoveGeneratorTest.PawnCaptures
+/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp:84: Failure
+Expected equality of these values:
+  silentMoves.size()
+    Which is: 0
+  1
+
+[  FAILED  ] MoveGeneratorTest.PawnCaptures (12 ms)
+[ RUN      ] MoveGeneratorTest.KnightMoves
+[       OK ] MoveGeneratorTest.KnightMoves (9 ms)
+[ RUN      ] MoveGeneratorTest.BishopMoves
+[       OK ] MoveGeneratorTest.BishopMoves (9 ms)
+[ RUN      ] MoveGeneratorTest.RookMoves
+[       OK ] MoveGeneratorTest.RookMoves (6 ms)
+[ RUN      ] MoveGeneratorTest.QueenMoves
+[       OK ] MoveGeneratorTest.QueenMoves (8 ms)
+[ RUN      ] MoveGeneratorTest.KingMoves
+[       OK ] MoveGeneratorTest.KingMoves (7 ms)
+[ RUN      ] MoveGeneratorTest.CastlingMoves
+/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp:149: Failure
+Expected equality of these values:
+  castlingMoves.size()
+    Which is: 0
+  2
+
+[  FAILED  ] MoveGeneratorTest.CastlingMoves (8 ms)
+[ RUN      ] MoveGeneratorTest.BlockedCastling
+[       OK ] MoveGeneratorTest.BlockedCastling (7 ms)
+[----------] 9 tests from MoveGeneratorTest (71 ms total)
+
+[----------] Global test environment tear-down
+[==========] 9 tests from 1 test suite ran. (71 ms total)
+[  PASSED  ] 6 tests.
+[  FAILED  ] 3 tests, listed below:
+[  FAILED  ] MoveGeneratorTest.PawnMoves
+[  FAILED  ] MoveGeneratorTest.PawnCaptures
+[  FAILED  ] MoveGeneratorTest.CastlingMoves
+
+ 3 FAILED TESTS
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Failed.
+"EngineTests" end time: Aug 23 15:31 CEST
+"EngineTests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Aug 23 15:31 CEST

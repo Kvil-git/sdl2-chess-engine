@@ -7,10 +7,16 @@
 
 
 struct CastlingRights {
-    uint16_t WhiteShortCastling : 1 = 1;
-    uint16_t WhiteLongCastling : 1 = 1;
-    uint16_t BlackShortCastling : 1 = 1;
-    uint16_t BlackLongCastling : 1 = 1;
+    bool WhiteShortCastling : 1;
+    bool WhiteLongCastling : 1;
+    bool BlackShortCastling : 1;
+    bool BlackLongCastling : 1;
+    CastlingRights(){
+        WhiteLongCastling = 1;
+        WhiteShortCastling = 1;
+        BlackLongCastling = 1;
+        BlackShortCastling = 1;
+    }
 };
 
 

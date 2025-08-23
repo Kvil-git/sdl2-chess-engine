@@ -6,10 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
@@ -22,17 +18,6 @@
 						0,
 						1
 					]
-				},
-				{
-					"build" : "Tests/Engine",
-					"jsonFile" : "directory-Tests.Engine-Debug-664291fcfaa92f7a88b0.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.12"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 0,
-					"source" : "Tests/Engine"
 				}
 			],
 			"name" : "Debug",
@@ -41,8 +26,7 @@
 				{
 					"directoryIndexes" : 
 					[
-						0,
-						1
+						0
 					],
 					"name" : "SdlChessEngine",
 					"targetIndexes" : 
@@ -57,14 +41,14 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "EngineTests::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-EngineTests-Debug-15e8ec63710902a09f66.json",
+					"jsonFile" : "target-EngineTests-Debug-0f43bd642b2dfc6986d8.json",
 					"name" : "EngineTests",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "SdlChessEngine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SdlChessEngine-Debug-17860f0fb7a662180f16.json",
+					"jsonFile" : "target-SdlChessEngine-Debug-9809991012c6fadea685.json",
 					"name" : "SdlChessEngine",
 					"projectIndex" : 0
 				}

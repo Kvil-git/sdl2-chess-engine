@@ -15,7 +15,7 @@ template<class IntegerType> inline bool SetBit(IntegerType & x, const int y)
 { return x |= IntWithSetBit<IntegerType>(y); }
 
 
-template<class IntegerType> inline std::vector<int> GetSetBitIndices(const IntegerType bitset) {
+template<class IntegerType> inline std::vector<int> GetSetBitIndices(IntegerType bitset) {
     std::vector<int> output;
     while (bitset != 0) {
         IntegerType t = bitset & -bitset;
@@ -24,6 +24,7 @@ template<class IntegerType> inline std::vector<int> GetSetBitIndices(const Integ
         bitset ^= t;
         output.push_back(index);
     }
+    return output;
 }
 
 

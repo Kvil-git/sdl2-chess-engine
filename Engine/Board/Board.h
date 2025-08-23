@@ -3,7 +3,7 @@
 
 #include "../../Structs/CastlingRights.h"
 #include <stdint.h>
-#include "Move.h"
+#include "../../Structs/Move.h"
 
 typedef uint64_t bitboard;
 struct Board {

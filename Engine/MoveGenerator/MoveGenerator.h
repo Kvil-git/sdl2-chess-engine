@@ -30,7 +30,6 @@ class MoveGenerator {
 
         void InitSliderMoveTables();
         void InitSliderPieceMasks();
-        void InitSlidingPieceArrays();
         void InitKnightArrays();
         void InitKingArrays();
         void InitPawnArrays();

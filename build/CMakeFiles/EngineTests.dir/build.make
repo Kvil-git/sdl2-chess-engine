@@ -83,17 +83,52 @@ CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp" -o CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.s
 
+CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o: CMakeFiles/EngineTests.dir/flags.make
+CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o: /home/kvil/Документы/coding\ projects/cpp/sdl\ chess\ engine/Engine/MoveGenerator/MoveGenerator.cpp
+CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o: CMakeFiles/EngineTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o -MF CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o.d -o CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o -c "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp"
+
+CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp" > CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.i
+
+CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp" -o CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.s
+
+CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o: CMakeFiles/EngineTests.dir/flags.make
+CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o: /home/kvil/Документы/coding\ projects/cpp/sdl\ chess\ engine/Engine/Board/Board.cpp
+CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o: CMakeFiles/EngineTests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o -MF CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o.d -o CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o -c "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp"
+
+CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp" > CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.i
+
+CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp" -o CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.s
+
 # Object files for target EngineTests
 EngineTests_OBJECTS = \
-"CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o"
+"CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o" \
+"CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o" \
+"CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o"
 
 # External object files for target EngineTests
 EngineTests_EXTERNAL_OBJECTS =
 
 EngineTests: CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o
+EngineTests: CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o
+EngineTests: CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o
 EngineTests: CMakeFiles/EngineTests.dir/build.make
+EngineTests: /usr/local/lib/libgtest.a
+EngineTests: /usr/local/lib/libgtest_main.a
+EngineTests: /usr/local/lib/libgtest.a
 EngineTests: CMakeFiles/EngineTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable EngineTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable EngineTests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/EngineTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

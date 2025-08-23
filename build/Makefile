@@ -152,6 +152,126 @@ EngineTests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/build
 .PHONY : EngineTests/fast
 
+Engine/Board/Board.o: Engine/Board/Board.cpp.o
+.PHONY : Engine/Board/Board.o
+
+# target to build an object file
+Engine/Board/Board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o
+.PHONY : Engine/Board/Board.cpp.o
+
+Engine/Board/Board.i: Engine/Board/Board.cpp.i
+.PHONY : Engine/Board/Board.i
+
+# target to preprocess a source file
+Engine/Board/Board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.i
+.PHONY : Engine/Board/Board.cpp.i
+
+Engine/Board/Board.s: Engine/Board/Board.cpp.s
+.PHONY : Engine/Board/Board.s
+
+# target to generate assembly for a file
+Engine/Board/Board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.s
+.PHONY : Engine/Board/Board.cpp.s
+
+Engine/MoveGenerator/MoveGenerator.o: Engine/MoveGenerator/MoveGenerator.cpp.o
+.PHONY : Engine/MoveGenerator/MoveGenerator.o
+
+# target to build an object file
+Engine/MoveGenerator/MoveGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o
+.PHONY : Engine/MoveGenerator/MoveGenerator.cpp.o
+
+Engine/MoveGenerator/MoveGenerator.i: Engine/MoveGenerator/MoveGenerator.cpp.i
+.PHONY : Engine/MoveGenerator/MoveGenerator.i
+
+# target to preprocess a source file
+Engine/MoveGenerator/MoveGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.i
+.PHONY : Engine/MoveGenerator/MoveGenerator.cpp.i
+
+Engine/MoveGenerator/MoveGenerator.s: Engine/MoveGenerator/MoveGenerator.cpp.s
+.PHONY : Engine/MoveGenerator/MoveGenerator.s
+
+# target to generate assembly for a file
+Engine/MoveGenerator/MoveGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.s
+.PHONY : Engine/MoveGenerator/MoveGenerator.cpp.s
+
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.o: GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.o
+
+# target to build an object file
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o
+
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.i: GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.i
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.i
+
+# target to preprocess a source file
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.i
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.i
+
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.s: GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.s
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.s
+
+# target to generate assembly for a file
+GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.s
+.PHONY : GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.s
+
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.o: GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.o
+
+# target to build an object file
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o
+
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.i: GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.i
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.i
+
+# target to preprocess a source file
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.i
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.i
+
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.s: GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.s
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.s
+
+# target to generate assembly for a file
+GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.s
+.PHONY : GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.s
+
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.o: GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.o
+
+# target to build an object file
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o
+
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.i: GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.i
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.i
+
+# target to preprocess a source file
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.i
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.i
+
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.s: GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.s
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.s
+
+# target to generate assembly for a file
+GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.s
+.PHONY : GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.s
+
 Tests/Engine/MoveGeneratorTests.o: Tests/Engine/MoveGeneratorTests.cpp.o
 .PHONY : Tests/Engine/MoveGeneratorTests.o
 
@@ -211,6 +331,21 @@ help:
 	@echo "... test"
 	@echo "... EngineTests"
 	@echo "... SdlChessEngine"
+	@echo "... Engine/Board/Board.o"
+	@echo "... Engine/Board/Board.i"
+	@echo "... Engine/Board/Board.s"
+	@echo "... Engine/MoveGenerator/MoveGenerator.o"
+	@echo "... Engine/MoveGenerator/MoveGenerator.i"
+	@echo "... Engine/MoveGenerator/MoveGenerator.s"
+	@echo "... GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.o"
+	@echo "... GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.i"
+	@echo "... GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.s"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.o"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.i"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.s"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.o"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.i"
+	@echo "... GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.s"
 	@echo "... Tests/Engine/MoveGeneratorTests.o"
 	@echo "... Tests/Engine/MoveGeneratorTests.i"
 	@echo "... Tests/Engine/MoveGeneratorTests.s"

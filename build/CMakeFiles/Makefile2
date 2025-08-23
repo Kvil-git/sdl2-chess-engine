@@ -65,33 +65,16 @@ CMAKE_BINARY_DIR = "/home/kvil/Документы/coding projects/cpp/sdl chess 
 # The main recursive "all" target.
 all: CMakeFiles/SdlChessEngine.dir/all
 all: CMakeFiles/EngineTests.dir/all
-all: Tests/Engine/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: Tests/Engine/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/SdlChessEngine.dir/clean
 clean: CMakeFiles/EngineTests.dir/clean
-clean: Tests/Engine/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory Tests/Engine
-
-# Recursive "all" directory target.
-Tests/Engine/all:
-.PHONY : Tests/Engine/all
-
-# Recursive "preinstall" directory target.
-Tests/Engine/preinstall:
-.PHONY : Tests/Engine/preinstall
-
-# Recursive "clean" directory target.
-Tests/Engine/clean:
-.PHONY : Tests/Engine/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/SdlChessEngine.dir
@@ -100,12 +83,12 @@ Tests/Engine/clean:
 CMakeFiles/SdlChessEngine.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SdlChessEngine.dir/build.make CMakeFiles/SdlChessEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=3,4 "Built target SdlChessEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=5,6,7,8,9 "Built target SdlChessEngine"
 .PHONY : CMakeFiles/SdlChessEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SdlChessEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SdlChessEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 0
 .PHONY : CMakeFiles/SdlChessEngine.dir/rule
@@ -126,12 +109,12 @@ CMakeFiles/SdlChessEngine.dir/clean:
 CMakeFiles/EngineTests.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EngineTests.dir/build.make CMakeFiles/EngineTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=1,2 "Built target EngineTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" --progress-num=1,2,3,4 "Built target EngineTests"
 .PHONY : CMakeFiles/EngineTests.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/EngineTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/EngineTests.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build/CMakeFiles" 0
 .PHONY : CMakeFiles/EngineTests.dir/rule

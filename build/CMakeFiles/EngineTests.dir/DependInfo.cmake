@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/Board/Board.cpp" "CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o" "gcc" "CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o.d"
+  "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Engine/MoveGenerator/MoveGenerator.cpp" "CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o" "gcc" "CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o.d"
   "/home/kvil/Документы/coding projects/cpp/sdl chess engine/Tests/Engine/MoveGeneratorTests.cpp" "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o" "gcc" "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o.d"
   )
 

@@ -4,6 +4,7 @@
 
 #include <stdint.h>
 #include "../Enums/MoveFlag.h"
+#include "../Enums/PieceType.h"
 
 
 struct Move {

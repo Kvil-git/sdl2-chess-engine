@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o" "gcc" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/BoardRenderer/Renderer_2D/Renderer_2D.cpp.o.d"
+  "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o" "gcc" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/InputStorage/InputStorage.cpp.o.d"
+  "/home/kvil/Документы/coding projects/cpp/sdl chess engine/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o" "gcc" "CMakeFiles/SdlChessEngine.dir/GUI/GUIComponents/WindowGUIOnly/WindowManager/WindowManager.cpp.o.d"
   "/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp" "CMakeFiles/SdlChessEngine.dir/main.cpp.o" "gcc" "CMakeFiles/SdlChessEngine.dir/main.cpp.o.d"
   )
 

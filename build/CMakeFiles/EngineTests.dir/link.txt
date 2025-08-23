@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o -o EngineTests 
+/usr/bin/c++ -g CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o -o EngineTests  -lSDL2 /usr/local/lib/libgtest.a /usr/local/lib/libgtest_main.a /usr/local/lib/libgtest.a 

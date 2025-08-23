@@ -585,7 +585,6 @@ std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool 
 MoveGenerator::MoveGenerator(){
     InitSliderMoveTables();
     InitSliderPieceMasks();
-    InitSlidingPieceArrays();
     InitKnightArrays();
     InitKingArrays();
     InitPawnArrays();

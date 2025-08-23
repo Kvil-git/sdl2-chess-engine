@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o"
+  "CMakeFiles/EngineTests.dir/Engine/Board/Board.cpp.o.d"
+  "CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o"
+  "CMakeFiles/EngineTests.dir/Engine/MoveGenerator/MoveGenerator.cpp.o.d"
   "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o"
   "CMakeFiles/EngineTests.dir/Tests/Engine/MoveGeneratorTests.cpp.o.d"
   "EngineTests"
