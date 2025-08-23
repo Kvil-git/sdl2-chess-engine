@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SdlChessEngine",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SdlChessEngine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SdlChessEngine-Debug-17860f0fb7a662180f16.json",
+					"name" : "SdlChessEngine",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/kvil/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/coding projects/cpp/sdl chess engine/build",
+		"source" : "/home/kvil/\u0414\u043e\u043a\u0443\u043c\u0435\u043d\u0442\u044b/coding projects/cpp/sdl chess engine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/build",
+  "command": "/usr/bin/c++   -g -o CMakeFiles/SdlChessEngine.dir/main.cpp.o -c \"/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp\"",
+  "file": "/home/kvil/Документы/coding projects/cpp/sdl chess engine/main.cpp",
+  "output": "CMakeFiles/SdlChessEngine.dir/main.cpp.o"
+}
+]
