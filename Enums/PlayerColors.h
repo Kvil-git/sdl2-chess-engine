@@ -3,8 +3,8 @@
 
 
 enum class PlayerColor {
-    White = 0,
-    Black = 1
+    White = 1,
+    Black = 0
 };
 
 #endif
