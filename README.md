@@ -124,4 +124,4 @@ bash
 ###### This project is provided for educational and personal use. Please respect the attribution requirements for the included assets.
 
 ##### Contributing
-###### This is a personal project with a focus on learning chess programming concepts and creating a modular, extensible architecture.
+###### This is a personal project with a focus on learning chess programming concepts and creating a modular, extensible architecture. So no contributing =)
