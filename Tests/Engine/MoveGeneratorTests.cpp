@@ -81,7 +81,7 @@ TEST_F(MoveGeneratorTest, PawnCaptures) {
     
     mg.FillPieceMoveArrays(board, true, PieceType::Pawn, silentMoves, captures);
     
-    EXPECT_EQ(silentMoves.size(), 1); // Only single push (double push blocked)
+    EXPECT_EQ(silentMoves.size(), 2); // Single and double push (double push not blocked)
     EXPECT_EQ(captures.size(), 1); // Capture on b3
 }
 

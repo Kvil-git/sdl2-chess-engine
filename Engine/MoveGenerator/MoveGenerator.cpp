@@ -425,21 +425,21 @@ void MoveGenerator::InitPawnArrays() {
         
         // White pawn moves (advance forward)
         if (column < 7) {  // Not on the 8th rank
-            SetBit(PawnCaptures[1][square], square + 8); // Single push
+            SetBit(PawnMoves[1][square], square + 8); // Single push
             
             // Double push from starting position (2nd rank)
             if (column == 1) {
-                SetBit(PawnCaptures[1][square], square + 16); // Single push
+                SetBit(PawnMoves[1][square], square + 16);
             }
         }
         
         // Black pawn moves (advance forward)
         if (column > 0) {  // Not on the 1st rank
-            SetBit(PawnCaptures[0][square], square - 8); // Single push
+            SetBit(PawnMoves[0][square], square - 8); // Single push
             
             // Double push from starting position (7th rank)
             if (column == 6) {
-                SetBit(PawnCaptures[0][square], square - 16);
+                SetBit(PawnMoves[0][square], square - 16);
             }
         }
         
@@ -487,39 +487,40 @@ void MoveGenerator::FillPieceMoveArrays(const Board& board, bool sideToMove, con
         fromSquares.push_back(square);
 
         const bitboard occupancy = board.AllPieces;
+        const bitboard nonOccupied = ~occupancy;
         const bitboard capturable = board.AllPiecesOfOneColor[!sideToMove];
 
         switch(piece) {
             case PieceType::Bishop:
                 moveBitboard = GetBishopMoves(square, occupancy);
                 captureBitboard = moveBitboard & capturable;
-                moveBitboard &= ~occupancy;
+                moveBitboard &= nonOccupied;
                 break;
 
             case PieceType::Rook:
                 moveBitboard = GetRookMoves(square, occupancy);
                 captureBitboard = moveBitboard & capturable;
-                moveBitboard &= ~occupancy;
+                moveBitboard &= nonOccupied;
                 break;
 
             case PieceType::Queen:
                 moveBitboard = GetBishopMoves(square, occupancy) | GetRookMoves(square, occupancy);
                 captureBitboard = moveBitboard & capturable;
-                moveBitboard &= ~occupancy;
+                moveBitboard &= nonOccupied;
                 break;
 
             case PieceType::Knight:
-                moveBitboard = KnightMoves[square] & ~occupancy;
+                moveBitboard = KnightMoves[square] & nonOccupied;
                 captureBitboard = KnightMoves[square] & capturable;
                 break;
 
             case PieceType::Pawn:
-                moveBitboard = PawnMoves[sideToMove][square] & ~occupancy;
+                moveBitboard = PawnMoves[sideToMove][square] & nonOccupied;
                 captureBitboard = PawnCaptures[sideToMove][square] & capturable;
                 break;
 
             case PieceType::King:
-                moveBitboard = KingMoves[square] & ~occupancy;
+                moveBitboard = KingMoves[square] & nonOccupied;
                 captureBitboard = KingMoves[square] & capturable;
                 break;
 
@@ -545,23 +546,29 @@ void MoveGenerator::FillPieceMoveArrays(const Board& board, bool sideToMove, con
 
 
 
+const int WhitePlayerColor = static_cast<int> (PlayerColor::White);
+const int BlackPlayerColor = static_cast<int> (PlayerColor::Black);
 
 
 const bitboard CastlingMasks[2][2] = {
-    {0x60, 0xe}, {0x6000000000000000, 0xe00000000000000}
+    // Black (sideToMove=0) castling masks on the eighth rank
+    [BlackPlayerColor] = {0x6000000000000000, 0xe00000000000000},
+    // White (sideToMove=1) castling masks on the first rank
+    [WhitePlayerColor] = {0x60, 0xe}
 };
+
 //white king castled from e1 to either g1 or c1, black king from e8 to g8 or c8 
 const Move KingCastlingMoves[2][2] = {
-    {Move(4, 6, MoveFlag::ShortCastling, PieceType::King), Move(4, 2, MoveFlag::LongCastling, PieceType::King)},
-    {Move(60, 62, MoveFlag::ShortCastling, PieceType::King), Move(60, 58, MoveFlag::LongCastling, PieceType::King)}
+    [BlackPlayerColor] = {Move(60, 62, MoveFlag::ShortCastling, PieceType::King), Move(60, 58, MoveFlag::LongCastling, PieceType::King)},
+    [WhitePlayerColor] = {Move(4, 6, MoveFlag::ShortCastling, PieceType::King), Move(4, 2, MoveFlag::LongCastling, PieceType::King)}
 };
 
 std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool sideToMove){
     std::vector<Move> output;
 
     bool castlingRights[2][2] = {
-        {board.castlingRights.WhiteShortCastling, board.castlingRights.WhiteLongCastling},
-        {board.castlingRights.BlackShortCastling, board.castlingRights.BlackLongCastling}
+        [BlackPlayerColor] = {board.castlingRights.BlackShortCastling, board.castlingRights.BlackLongCastling},
+        [WhitePlayerColor] = {board.castlingRights.WhiteShortCastling, board.castlingRights.WhiteLongCastling}
     };
 
     for(int castlingType = 0; castlingType < 2; castlingType++){
