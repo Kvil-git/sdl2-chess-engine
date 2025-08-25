@@ -589,12 +589,28 @@ std::vector<Move> MoveGenerator::GenerateCastlingMoves(const Board& board, bool 
 
 
 
+
+std::vector<bitboard> MoveGenerator::RookMoves[64];
+std::vector<bitboard> MoveGenerator::BishopMoves[64];
+
+bitboard MoveGenerator::RookMasks[64];
+bitboard MoveGenerator::BishopMasks[64];
+bitboard MoveGenerator::KnightMoves[64];
+bitboard MoveGenerator::KingMoves[64];
+bitboard MoveGenerator::PawnMoves[2][64];
+bitboard MoveGenerator::PawnCaptures[2][64];
+
+bool MoveGenerator::initialized = false;
+
+
 MoveGenerator::MoveGenerator(){
-    InitSliderMoveTables();
-    InitSliderPieceMasks();
-    InitKnightArrays();
-    InitKingArrays();
-    InitPawnArrays();
+    if(!initialized) {
+        InitSliderMoveTables();
+        InitSliderPieceMasks();
+        InitKnightArrays();
+        InitKingArrays();
+        InitPawnArrays();
+    }
 }
 
 #endif

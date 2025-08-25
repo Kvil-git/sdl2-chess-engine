@@ -9,24 +9,27 @@
 class MoveGenerator {
     private:        
 
-        std::vector<bitboard> RookMoves[64];
-        std::vector<bitboard> BishopMoves[64];
+        static std::vector<bitboard> RookMoves[64];
+        static std::vector<bitboard> BishopMoves[64];
         
-        bitboard RookMasks[64];
-        bitboard BishopMasks[64];
+        static bitboard RookMasks[64];
+        static bitboard BishopMasks[64];
 
         bitboard GetRookMoves(int sq, bitboard occupancy);
         bitboard GetBishopMoves(int sq, bitboard occupancy);
 
+        static bitboard KnightMoves[64];
+
+        static bitboard KingMoves[64];
+
+        static bitboard PawnMoves[2][64];
+        static bitboard PawnCaptures[2][64];
+
+        static bool initialized;
 
 
 
-        bitboard KnightMoves[64];
 
-        bitboard KingMoves[64];
-
-        bitboard PawnMoves[2][64];
-        bitboard PawnCaptures[2][64];
 
         void InitSliderMoveTables();
         void InitSliderPieceMasks();
